@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets" 
+   
+>
+
+<h:head>
+
+<style>
+
+
+
+#header{
+	background-color:black;
+	color:white;
+	text-align:center;
+	padding:1%;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+    background-color: #5cb85c; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+.btn-group .button_1 {
+    background-color: #4CAF50; /* Green */
+    border: 1px solid green;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+	
+}
+.btn-group .button_1:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+.btn-group .button_1:hover {
+    background-color: #3e8e41;
+}
+
+.form_2{
+position:absolute;
+z-index:1;
+left:70%;
+
+}
+
+</style>
+
+<script type="text/javascript">
+function display_modal(){
+	if(#{login.isLoged()}){
+	
+		modal.style.display = "none";
+	    var view_modal = null;
+	     localStorage.setItem("view_modal",view_modal);
+	     
+	}
+	else{
+		if(localStorage.getItem("view_modal")=="block")
+			modal.style.display = "block";
+		else{
+			modal.style.display="none";
+		}
+	}
+}
+
+window.onload = display_modal; 	
+
+</script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+-->
+
+</h:head>
+<h:body>
+
+
+
+
+<div id="header">
+	<h2>Airbnb</h2>
+</div>
+<h:link  outcome="welcome.xhtml">
+	<h:graphicImage library="img" name="airbnb.png"  style="position:absolute;left:2%;width:100px;height:100px;"/>
+</h:link>
+<!-- Trigger/Open The Modal -->
+
+
+<h:panelGroup rendered="#{not login.isLoged()}">
+<div class="btn-group form_2"  >
+	<button class="button_1"  id="myBtn">Log in </button>
+	<button class="button_1" onclick="location.href='register.xhtml'">Register</button>
+</div>
+</h:panelGroup>
+<h:panelGroup >
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close" >x</span>
+      <h2>Log In</h2>
+    </div>
+    <div class="modal-body">
+      
+        <h:form>
+        	<div class="form-group">
+			<h:outputText value="Username" />
+			<h:inputText id="username" value="#{login.username}" class="form-control" style="width: 30%;"/>
+			</div>
+			
+			<br></br>
+			
+			<div class="form-group">
+			<h:outputText value="Password" />
+			<h:inputSecret id="password" value="#{login.password}" class="form-control" style="width: 30%;"/>
+			</div>
+			
+			<br></br>
+	
+			<h:commandButton id="login_button" action="#{login.validateUsernamePassword()}"
+			value="Login" binding="#{login.username_UI}"  update=":login_message" onclick="display_modal()" class="button">
+			
+			</h:commandButton>
+			
+		</h:form>
+	
+     
+    </div>
+    <div class="modal-footer" >
+      <h4>
+      <h:message id="login_message" for="login_button"  style="color:red;margin:8px;" autoUpdate="true"
+			 />
+			 </h4>
+      
+    </div>
+  </div>
+</div>
+</h:panelGroup>
+
+
+<h:panelGroup rendered="#{login.isLoged()}">
+<div class="btn-group form_2">
+	<h:form>
+	<h:commandButton rendered="#{login.enable_special_button()}" action="#{login.special_button_action()}"
+			value="#{login.special_button_value()}"  class="button_1" />
+	<h:commandButton id="profile" action="#{login.get_profile()}"
+			value="#{login.getUserName()}"  class="button_1" />	
+	<h:commandButton id="logout_button" action="#{login.logout()}"
+			value="Logout"  class="button_1" />
+	</h:form>
+</div>
+</h:panelGroup>
+
+<script type="text/javascript">
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the span element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+  var view_modal = "block";
+  localStorage.setItem("view_modal",view_modal);
+}
+
+// When the user clicks on span (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+    var view_modal = null;
+    localStorage.setItem("view_modal",view_modal);
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event){
+    if (event.target == modal ){
+       		modal.style.display = "none";
+       		var view_modal = null;
+       	    localStorage.setItem("view_modal",view_modal);
+    }
+    
+}
+</script>
+
+</h:body>
+</html>

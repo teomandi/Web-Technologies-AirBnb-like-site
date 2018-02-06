@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<ui:composition template="/WEB-INF/templates/masterTemplate.xhtml"
+    xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+ >
+  <!-- to profile -->
+
+	<ui:define name="title">Profile</ui:define>
+	<ui:define name="content">
+		<h:outputStylesheet  library="css" name = "profile.css" />
+		<h:outputStylesheet library="css" name="buttons.css"  />
+		
+	<h:panelGroup>
+		<h:form>
+			<h:commandButton value="View Messages" action="chat_room.xhtml" class="button button_blue" style="margin-left:100px;" >
+				<f:param name="sender" value="#{profile.u.getUsername()}" />
+			</h:commandButton>
+		</h:form>
+		
+		<h:form id="msg">
+			<h2 class="form">Welcome #{profile.name} #{profile.surname}</h2><br/>
+			<div id="pic">
+				<h:graphicImage  library="user_images" name="#{profile.profile_pic}" style="width:250px;height:250px;" /><br/>
+				<h:commandButton class="button button1" action="#{profile.edit_pic()}" value="Change picture" /><br/>
+			</div>
+			<h4><br/>
+				<br/><h:messages  class="form" style="color:green;margin:8px;" autoUpdate="true" globalOnly="true" /><br/>
+				<br/><h:messages class="form" for="msg" style="color:Gold;margin:8px;width:40%;" autoUpdate="true" /><br/><br/>
+			</h4>
+			<br/><h3 class="form">Username:  #{login.getUserName()}</h3>
+			<br/><br/>
+		
+						
+			<br/><h3 class="form" >Name: #{profile.name}</h3>
+			<br/><br/><h:commandButton class="button button1"  action="#{profile.edit_name()}" value="Edit Name" /> 	<br/>
+		
+		
+			<br/><h3 class="form">Surname:#{profile.surname}</h3>
+			<br/><br/><h:commandButton class="button button1" action="#{profile.edit_surname()}" value="Change Surname" /> <br/>
+			
+			<br/><h3 class="form">email: #{profile.email}</h3>
+			<br/><br/><h:commandButton class="button button1" action="#{profile.edit_email()}" value="Change Email" /> <br/>
+			
+			<br/><h3 class="form">phone: #{profile.phone}</h3>
+			<br/><br/><h:commandButton class="button button1" action="#{profile.edit_phone()}" value="Change Phone" /> <br/>
+			
+			<br/><h3 class="form">role: #{profile.role}</h3>
+			<br/><br/><h:commandButton class="button button1" action="#{profile.edit_role()}" value="Change Role" /> <br/>
+			
+			<br/><br/><h:commandButton class="button button1" action="#{profile.edit_pwd()}" value="Change Password" /> 
+			
+			<br/><br/><br/><br/>
+		
+		</h:form>
+	</h:panelGroup>
+	
+	<br/><br/><br/><br/>
+	
+	<!-- dwmatia pou exei klisei -->
+	<h:form class="form2">
+			<h3>You have booked:</h3>		
+			<ui:repeat var="uri" value="#{profile.uri_list}" varStatus="myVarStatus"> 
+				<h:link  outcome="room_page.xhtml" >	
+					<div class="cells" style="display:inline-block;font-size:120%;">
+					<table >
+						<tr>
+							<td>
+								<h:graphicImage library="apartments" name="#{uri.room.getMainPic()}"  style="width:180px;height:160px;display:inline-block;" />
+							</td>
+							
+							<td style="width:500px;display:inline-block;margin-left:50px">
+								<span style="color:#3f9b43;" >Room name: </span>#{uri.room.getRoomName()} <br/>
+								<span style="color:#3f9b43;" >Date: </span>#{uri.bookedDate} <br/>
+								<span style="color:#3f9b43;" >Your Comment: </span>#{uri.comment}<br/>
+								<span style="color:#3f9b43;" >Your Rating: </span>
+								<p:rating value="#{uri.getRating()}" readonly="true" />
+							</td>		
+						</tr>
+						</table>	
+					</div>
+					<f:param name="id" value="#{uri.room.getRoomId()}" />
+				</h:link>
+ 			</ui:repeat>
+ 			
+ 			<br/><br/><br/><br/><br/><br/><br/><br/>
+ 			
+		</h:form>
+	
+	
+	
+</ui:define>
+</ui:composition>

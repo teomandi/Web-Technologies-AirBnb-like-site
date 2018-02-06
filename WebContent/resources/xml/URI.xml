@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UserRoomInteractions>
+  <UserRoomInteractions interaction_id="41">
+    <booked_date>7/9-8/9</booked_date>
+    <comment>You haven't leave a Comment</comment>
+    <comment_date />
+    <rating>5</rating>
+    <user user_id="37">
+      <username>k</username>
+      <name>k_name</name>
+      <surname>k</surname>
+      <email>k_email</email>
+      <phone>kkkkk</phone>
+      <role>H</role>
+      <profile_picture>default.jpg</profile_picture>
+      <password>8ce4b16b22b58894aa86c421e8759df3</password>
+    </user>
+    <room room_id="39">
+      <address>1/9-4/9:9/9-1/10</address>
+      <area>22</area>
+      <location>BERLIN</location>
+      <cost_per_person>2</cost_per_person>
+      <date>3/9-5/9:5/9-4/9</date>
+      <description>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</description>
+      <elevator>Yes</elevator>
+      <events>Not Allowed</events>
+      <heating>No</heating>
+      <info>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</info>
+      <kitchen>No</kitchen>
+      <lat>52.52000659999999</lat>
+      <ling>13.404953999999975</ling>
+      <livingroom>No</livingroom>
+      <minimum_charge>1</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>37/3/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>2</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>Yes</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/37/3/</pictures_folder>
+      <refrigerator>No</refrigerator>
+      <room_name>Rooms inBerlin</room_name>
+      <smoking>Not Allowed</smoking>
+      <tv>No</tv>
+      <type>Shared Room</type>
+      <wifi>No</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="42">
+    <booked_date>6/9-8/9</booked_date>
+    <comment>polu kalo</comment>
+    <comment_date>2017/09/22</comment_date>
+    <rating>5</rating>
+    <user user_id="37">
+      <username>k</username>
+      <name>k_name</name>
+      <surname>k</surname>
+      <email>k_email</email>
+      <phone>kkkkk</phone>
+      <role>H</role>
+      <profile_picture>default.jpg</profile_picture>
+      <password>8ce4b16b22b58894aa86c421e8759df3</password>
+    </user>
+    <room room_id="44">
+      <address>berlin</address>
+      <area>2</area>
+      <location>BERLIN</location>
+      <cost_per_person>2</cost_per_person>
+      <date>4/9-6/9:8/9-20/9:24/9-25/9:30/9-1/10</date>
+      <description>? ??????? ??? ?????? ???? ???? ??? ???????? ???? ?????? ?? ???????????? ??????? , ????? ??? ????????? ??? ????? ??? ???? ?? ?????????? ??? ??? ?? ???????? , ???? ???????? ?????? ??? ????????? ???????????? !</description>
+      <elevator>NO</elevator>
+      <events>Not Allowed</events>
+      <heating>NO</heating>
+      <info>? ??????? ??? ?????? ???? ???? ??? ???????? ???? ?????? ?? ???????????? ??????? , ????? ??? ????????? ??? ????? ??? ???? ?? ?????????? ??? ??? ?? ???????? , ???? ???????? ?????? ??? ????????? ???????????? !</info>
+      <kitchen>NO</kitchen>
+      <lat>52.52000659999999</lat>
+      <ling>13.404953999999975</ling>
+      <livingroom>NO</livingroom>
+      <minimum_charge>4</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>40/5/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>3</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>NO</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/40/5/</pictures_folder>
+      <refrigerator>NO</refrigerator>
+      <room_name>b4</room_name>
+      <smoking>Not Allowed</smoking>
+      <tv>NO</tv>
+      <type>Shared Room</type>
+      <wifi>NO</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="43">
+    <booked_date>5/9-18/9</booked_date>
+    <comment>htan polu kala</comment>
+    <comment_date>2017/09/24</comment_date>
+    <rating>5</rating>
+    <user user_id="30">
+      <username>kk</username>
+      <name>k_name</name>
+      <surname>k</surname>
+      <email>k</email>
+      <phone>kk</phone>
+      <role>H</role>
+      <profile_picture>2-326525576614335793.jpg</profile_picture>
+      <password>8ce4b16b22b58894aa86c421e8759df3</password>
+    </user>
+    <room room_id="42">
+      <address>berlin</address>
+      <area>2</area>
+      <location>BERLIN</location>
+      <cost_per_person>8</cost_per_person>
+      <date>1/9-5/9:18/9-19/9:21/9-22/9:24/9-28/9:30/9-1/10</date>
+      <description>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</description>
+      <elevator>Yes</elevator>
+      <events>Allowed</events>
+      <heating>Yes</heating>
+      <info>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</info>
+      <kitchen>Yes</kitchen>
+      <lat>52.52000659999999</lat>
+      <ling>13.404953999999975</ling>
+      <livingroom>Yes</livingroom>
+      <minimum_charge>8</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>40/3/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>2</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>Yes</parking>
+      <pets>Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/40/3/</pictures_folder>
+      <refrigerator>Yes</refrigerator>
+      <room_name>b2</room_name>
+      <smoking>Allowed</smoking>
+      <tv>Yes</tv>
+      <type>Private Room</type>
+      <wifi>Yes</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="44">
+    <booked_date>5/9-10/9</booked_date>
+    <comment>You haven't leave a Comment</comment>
+    <comment_date />
+    <rating>3</rating>
+    <user user_id="30">
+      <username>kk</username>
+      <name>k_name</name>
+      <surname>k</surname>
+      <email>k</email>
+      <phone>kk</phone>
+      <role>H</role>
+      <profile_picture>2-326525576614335793.jpg</profile_picture>
+      <password>8ce4b16b22b58894aa86c421e8759df3</password>
+    </user>
+    <room room_id="37">
+      <address>budapest</address>
+      <area>2</area>
+      <location>Hungary</location>
+      <cost_per_person>2</cost_per_person>
+      <date>1/9-5/9:10/9-1/10</date>
+      <description>Folks, we are proud to give you this completely remastered version of 28 DAYS&#xD;
+Our first album "Worst Case Scenario" is coming very soon.&#xD;
+Stay connected, visit our facebook page. (french metal) kiss ;)&#xD;
+Synesthesia.?</description>
+      <elevator>No</elevator>
+      <events>Allowed</events>
+      <heating>No</heating>
+      <info>Folks, we are proud to give you this completely remastered version of 28 DAYS&#xD;
+Our first album "Worst Case Scenario" is coming very soon.&#xD;
+Stay connected, visit our facebook page. (french metal) kiss ;)&#xD;
+Synesthesia.?</info>
+      <kitchen>No</kitchen>
+      <lat>47.497912</lat>
+      <ling>19.04023499999994</ling>
+      <livingroom>No</livingroom>
+      <minimum_charge>9</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>30/2/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>2</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>Yes</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/30/2/</pictures_folder>
+      <refrigerator>No</refrigerator>
+      <room_name>HungApss</room_name>
+      <smoking>Not Allowed</smoking>
+      <tv>No</tv>
+      <type>Private Room</type>
+      <wifi>Yes</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="45">
+    <booked_date>1/9-4/9</booked_date>
+    <comment>perfecto!</comment>
+    <comment_date>2017/09/28</comment_date>
+    <rating>4</rating>
+    <user user_id="40">
+      <username>host</username>
+      <name>host</name>
+      <surname>host</surname>
+      <email>email</email>
+      <phone>2222</phone>
+      <role>H</role>
+      <profile_picture>default.jpg</profile_picture>
+      <password>67b3dba8bc6778101892eb77249db32e</password>
+    </user>
+    <room room_id="44">
+      <address>berlin</address>
+      <area>2</area>
+      <location>BERLIN</location>
+      <cost_per_person>2</cost_per_person>
+      <date>4/9-6/9:8/9-20/9:24/9-25/9:30/9-1/10</date>
+      <description>? ??????? ??? ?????? ???? ???? ??? ???????? ???? ?????? ?? ???????????? ??????? , ????? ??? ????????? ??? ????? ??? ???? ?? ?????????? ??? ??? ?? ???????? , ???? ???????? ?????? ??? ????????? ???????????? !</description>
+      <elevator>NO</elevator>
+      <events>Not Allowed</events>
+      <heating>NO</heating>
+      <info>? ??????? ??? ?????? ???? ???? ??? ???????? ???? ?????? ?? ???????????? ??????? , ????? ??? ????????? ??? ????? ??? ???? ?? ?????????? ??? ??? ?? ???????? , ???? ???????? ?????? ??? ????????? ???????????? !</info>
+      <kitchen>NO</kitchen>
+      <lat>52.52000659999999</lat>
+      <ling>13.404953999999975</ling>
+      <livingroom>NO</livingroom>
+      <minimum_charge>4</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>40/5/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>3</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>NO</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/40/5/</pictures_folder>
+      <refrigerator>NO</refrigerator>
+      <room_name>b4</room_name>
+      <smoking>Not Allowed</smoking>
+      <tv>NO</tv>
+      <type>Shared Room</type>
+      <wifi>NO</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="46">
+    <booked_date>2/9-5/9</booked_date>
+    <comment>latrmeno</comment>
+    <comment_date>2017/09/28</comment_date>
+    <rating>4</rating>
+    <user user_id="37">
+      <username>k</username>
+      <name>k_name</name>
+      <surname>k</surname>
+      <email>k_email</email>
+      <phone>kkkkk</phone>
+      <role>H</role>
+      <profile_picture>default.jpg</profile_picture>
+      <password>8ce4b16b22b58894aa86c421e8759df3</password>
+    </user>
+    <room room_id="40">
+      <address>berlin</address>
+      <area>2</area>
+      <location>BERLIN</location>
+      <cost_per_person>5</cost_per_person>
+      <date>1/9-2/9:5/9-7/9:11/9-19/9:22/9-27/9:30/9-1/10</date>
+      <description>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</description>
+      <elevator>Yes</elevator>
+      <events>Not Allowed</events>
+      <heating>No</heating>
+      <info>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</info>
+      <kitchen>No</kitchen>
+      <lat>52.52000659999999</lat>
+      <ling>13.404953999999975</ling>
+      <livingroom>No</livingroom>
+      <minimum_charge>5</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>49/2/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>2</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>Yes</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/49/2/</pictures_folder>
+      <refrigerator>No</refrigerator>
+      <room_name>IrenesRooms</room_name>
+      <smoking>Not Allowed</smoking>
+      <tv>Yes</tv>
+      <type>Private Room</type>
+      <wifi>No</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="47">
+    <booked_date>27/9-30/9</booked_date>
+    <comment>polu kalo!</comment>
+    <comment_date>2017/09/25</comment_date>
+    <rating>4</rating>
+    <user user_id="57">
+      <username>new_guy</username>
+      <name>name</name>
+      <surname>surname</surname>
+      <email>n</email>
+      <phone>n</phone>
+      <role>H</role>
+      <profile_picture>airbnb_cover-4276805191240486657.png</profile_picture>
+      <password>eab71244afb687f16d8c4f5ee9d6ef0e</password>
+    </user>
+    <room room_id="40">
+      <address>berlin</address>
+      <area>2</area>
+      <location>BERLIN</location>
+      <cost_per_person>5</cost_per_person>
+      <date>1/9-2/9:5/9-7/9:11/9-19/9:22/9-27/9:30/9-1/10</date>
+      <description>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</description>
+      <elevator>Yes</elevator>
+      <events>Not Allowed</events>
+      <heating>No</heating>
+      <info>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</info>
+      <kitchen>No</kitchen>
+      <lat>52.52000659999999</lat>
+      <ling>13.404953999999975</ling>
+      <livingroom>No</livingroom>
+      <minimum_charge>5</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>49/2/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>2</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>Yes</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/49/2/</pictures_folder>
+      <refrigerator>No</refrigerator>
+      <room_name>IrenesRooms</room_name>
+      <smoking>Not Allowed</smoking>
+      <tv>Yes</tv>
+      <type>Private Room</type>
+      <wifi>No</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="48">
+    <booked_date>7/9-10/9</booked_date>
+    <comment>You haven't leave a Comment</comment>
+    <comment_date />
+    <rating>0</rating>
+    <user user_id="40">
+      <username>host</username>
+      <name>host</name>
+      <surname>host</surname>
+      <email>email</email>
+      <phone>2222</phone>
+      <role>H</role>
+      <profile_picture>default.jpg</profile_picture>
+      <password>67b3dba8bc6778101892eb77249db32e</password>
+    </user>
+    <room room_id="43">
+      <address>berlin</address>
+      <area>2</area>
+      <location>BERLIN</location>
+      <cost_per_person>7</cost_per_person>
+      <date>4/9-7/9:10/9-1/10</date>
+      <description>if(living_r=="") &#xD;
+    		living_r="NO";</description>
+      <elevator>NO</elevator>
+      <events>Not Allowed</events>
+      <heating>NO</heating>
+      <info>if(living_r=="") &#xD;
+    		living_r="NO";</info>
+      <kitchen>NO</kitchen>
+      <lat>52.52000659999999</lat>
+      <ling>13.404953999999975</ling>
+      <livingroom>NO</livingroom>
+      <minimum_charge>7</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>40/4/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>2</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>NO</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/40/4/</pictures_folder>
+      <refrigerator>NO</refrigerator>
+      <room_name>b3</room_name>
+      <smoking>Allowed</smoking>
+      <tv>NO</tv>
+      <type>Private Room</type>
+      <wifi>NO</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="49">
+    <booked_date>19/9-22/9</booked_date>
+    <comment>ola uperoxa!</comment>
+    <comment_date>2017/09/28</comment_date>
+    <rating>5</rating>
+    <user user_id="59">
+      <username>paul</username>
+      <name>p_name</name>
+      <surname>p_surname</surname>
+      <email>p_email</email>
+      <phone>121212121212</phone>
+      <role>H</role>
+      <profile_picture>giwrgosmandi@giwrgosmandi-desktop ~_002-1002649238570069763.png</profile_picture>
+      <password>83878c91171338902e0fe0fb97a8c47a</password>
+    </user>
+    <room room_id="40">
+      <address>berlin</address>
+      <area>2</area>
+      <location>BERLIN</location>
+      <cost_per_person>5</cost_per_person>
+      <date>1/9-2/9:5/9-7/9:11/9-19/9:22/9-27/9:30/9-1/10</date>
+      <description>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</description>
+      <elevator>Yes</elevator>
+      <events>Not Allowed</events>
+      <heating>No</heating>
+      <info>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</info>
+      <kitchen>No</kitchen>
+      <lat>52.52000659999999</lat>
+      <ling>13.404953999999975</ling>
+      <livingroom>No</livingroom>
+      <minimum_charge>5</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>49/2/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>2</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>Yes</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/49/2/</pictures_folder>
+      <refrigerator>No</refrigerator>
+      <room_name>IrenesRooms</room_name>
+      <smoking>Not Allowed</smoking>
+      <tv>Yes</tv>
+      <type>Private Room</type>
+      <wifi>No</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="50">
+    <booked_date>15/9-18/9</booked_date>
+    <comment>cheeeki briki my friend!</comment>
+    <comment_date>2017/09/28</comment_date>
+    <rating>3</rating>
+    <user user_id="30">
+      <username>kk</username>
+      <name>k_name</name>
+      <surname>k</surname>
+      <email>k</email>
+      <phone>kk</phone>
+      <role>H</role>
+      <profile_picture>2-326525576614335793.jpg</profile_picture>
+      <password>8ce4b16b22b58894aa86c421e8759df3</password>
+    </user>
+    <room room_id="46">
+      <address>warasw</address>
+      <area>2</area>
+      <location>POLAND</location>
+      <cost_per_person>8</cost_per_person>
+      <date>1/9-2/9:7/9-15/9:18/9-26/9:30/9-1/10</date>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</description>
+      <elevator>No</elevator>
+      <events>Not Allowed</events>
+      <heating>No</heating>
+      <info>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</info>
+      <kitchen>No</kitchen>
+      <lat>52.2296756</lat>
+      <ling>21.012228700000037</ling>
+      <livingroom>No</livingroom>
+      <minimum_charge>2</minimum_charge>
+      <minimum_days>1</minimum_days>
+      <main_picture>59/2/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>5</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>No</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/59/2/</pictures_folder>
+      <refrigerator>No</refrigerator>
+      <room_name>polandRoom</room_name>
+      <smoking>Allowed</smoking>
+      <tv>No</tv>
+      <type>Apartment</type>
+      <wifi>No</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="51">
+    <booked_date>2/9-5/9</booked_date>
+    <comment>You haven't leave a Comment</comment>
+    <comment_date />
+    <rating>0</rating>
+    <user user_id="59">
+      <username>paul</username>
+      <name>p_name</name>
+      <surname>p_surname</surname>
+      <email>p_email</email>
+      <phone>121212121212</phone>
+      <role>H</role>
+      <profile_picture>giwrgosmandi@giwrgosmandi-desktop ~_002-1002649238570069763.png</profile_picture>
+      <password>83878c91171338902e0fe0fb97a8c47a</password>
+    </user>
+    <room room_id="46">
+      <address>warasw</address>
+      <area>2</area>
+      <location>POLAND</location>
+      <cost_per_person>8</cost_per_person>
+      <date>1/9-2/9:7/9-15/9:18/9-26/9:30/9-1/10</date>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</description>
+      <elevator>No</elevator>
+      <events>Not Allowed</events>
+      <heating>No</heating>
+      <info>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</info>
+      <kitchen>No</kitchen>
+      <lat>52.2296756</lat>
+      <ling>21.012228700000037</ling>
+      <livingroom>No</livingroom>
+      <minimum_charge>2</minimum_charge>
+      <minimum_days>1</minimum_days>
+      <main_picture>59/2/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>5</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>No</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/59/2/</pictures_folder>
+      <refrigerator>No</refrigerator>
+      <room_name>polandRoom</room_name>
+      <smoking>Allowed</smoking>
+      <tv>No</tv>
+      <type>Apartment</type>
+      <wifi>No</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="52">
+    <booked_date>26/9-30/9</booked_date>
+    <comment>You haven't leave a Comment</comment>
+    <comment_date />
+    <rating>1</rating>
+    <user user_id="32">
+      <username>kkk</username>
+      <name>kkk_name</name>
+      <surname>k</surname>
+      <email>k</email>
+      <phone>k</phone>
+      <role>U</role>
+      <profile_picture>1-1901029468259034075.jpg</profile_picture>
+      <password>8ce4b16b22b58894aa86c421e8759df3</password>
+    </user>
+    <room room_id="46">
+      <address>warasw</address>
+      <area>2</area>
+      <location>POLAND</location>
+      <cost_per_person>8</cost_per_person>
+      <date>1/9-2/9:7/9-15/9:18/9-26/9:30/9-1/10</date>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</description>
+      <elevator>No</elevator>
+      <events>Not Allowed</events>
+      <heating>No</heating>
+      <info>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</info>
+      <kitchen>No</kitchen>
+      <lat>52.2296756</lat>
+      <ling>21.012228700000037</ling>
+      <livingroom>No</livingroom>
+      <minimum_charge>2</minimum_charge>
+      <minimum_days>1</minimum_days>
+      <main_picture>59/2/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>5</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>No</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/59/2/</pictures_folder>
+      <refrigerator>No</refrigerator>
+      <room_name>polandRoom</room_name>
+      <smoking>Allowed</smoking>
+      <tv>No</tv>
+      <type>Apartment</type>
+      <wifi>No</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="53">
+    <booked_date>25/9-30/9</booked_date>
+    <comment>You haven't leave a Comment</comment>
+    <comment_date />
+    <rating>1</rating>
+    <user user_id="32">
+      <username>kkk</username>
+      <name>kkk_name</name>
+      <surname>k</surname>
+      <email>k</email>
+      <phone>k</phone>
+      <role>U</role>
+      <profile_picture>1-1901029468259034075.jpg</profile_picture>
+      <password>8ce4b16b22b58894aa86c421e8759df3</password>
+    </user>
+    <room room_id="44">
+      <address>berlin</address>
+      <area>2</area>
+      <location>BERLIN</location>
+      <cost_per_person>2</cost_per_person>
+      <date>4/9-6/9:8/9-20/9:24/9-25/9:30/9-1/10</date>
+      <description>? ??????? ??? ?????? ???? ???? ??? ???????? ???? ?????? ?? ???????????? ??????? , ????? ??? ????????? ??? ????? ??? ???? ?? ?????????? ??? ??? ?? ???????? , ???? ???????? ?????? ??? ????????? ???????????? !</description>
+      <elevator>NO</elevator>
+      <events>Not Allowed</events>
+      <heating>NO</heating>
+      <info>? ??????? ??? ?????? ???? ???? ??? ???????? ???? ?????? ?? ???????????? ??????? , ????? ??? ????????? ??? ????? ??? ???? ?? ?????????? ??? ??? ?? ???????? , ???? ???????? ?????? ??? ????????? ???????????? !</info>
+      <kitchen>NO</kitchen>
+      <lat>52.52000659999999</lat>
+      <ling>13.404953999999975</ling>
+      <livingroom>NO</livingroom>
+      <minimum_charge>4</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>40/5/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>3</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>NO</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/40/5/</pictures_folder>
+      <refrigerator>NO</refrigerator>
+      <room_name>b4</room_name>
+      <smoking>Not Allowed</smoking>
+      <tv>NO</tv>
+      <type>Shared Room</type>
+      <wifi>NO</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="54">
+    <booked_date>7/9-11/9</booked_date>
+    <comment>You haven't leave a Comment</comment>
+    <comment_date />
+    <rating>0</rating>
+    <user user_id="37">
+      <username>k</username>
+      <name>k_name</name>
+      <surname>k</surname>
+      <email>k_email</email>
+      <phone>kkkkk</phone>
+      <role>H</role>
+      <profile_picture>default.jpg</profile_picture>
+      <password>8ce4b16b22b58894aa86c421e8759df3</password>
+    </user>
+    <room room_id="40">
+      <address>berlin</address>
+      <area>2</area>
+      <location>BERLIN</location>
+      <cost_per_person>5</cost_per_person>
+      <date>1/9-2/9:5/9-7/9:11/9-19/9:22/9-27/9:30/9-1/10</date>
+      <description>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</description>
+      <elevator>Yes</elevator>
+      <events>Not Allowed</events>
+      <heating>No</heating>
+      <info>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</info>
+      <kitchen>No</kitchen>
+      <lat>52.52000659999999</lat>
+      <ling>13.404953999999975</ling>
+      <livingroom>No</livingroom>
+      <minimum_charge>5</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>49/2/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>2</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>Yes</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/49/2/</pictures_folder>
+      <refrigerator>No</refrigerator>
+      <room_name>IrenesRooms</room_name>
+      <smoking>Not Allowed</smoking>
+      <tv>Yes</tv>
+      <type>Private Room</type>
+      <wifi>No</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="55">
+    <booked_date>28/9-30/9</booked_date>
+    <comment>ejaisio</comment>
+    <comment_date>2017/09/28</comment_date>
+    <rating>2</rating>
+    <user user_id="37">
+      <username>k</username>
+      <name>k_name</name>
+      <surname>k</surname>
+      <email>k_email</email>
+      <phone>kkkkk</phone>
+      <role>H</role>
+      <profile_picture>default.jpg</profile_picture>
+      <password>8ce4b16b22b58894aa86c421e8759df3</password>
+    </user>
+    <room room_id="42">
+      <address>berlin</address>
+      <area>2</area>
+      <location>BERLIN</location>
+      <cost_per_person>8</cost_per_person>
+      <date>1/9-5/9:18/9-19/9:21/9-22/9:24/9-28/9:30/9-1/10</date>
+      <description>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</description>
+      <elevator>Yes</elevator>
+      <events>Allowed</events>
+      <heating>Yes</heating>
+      <info>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</info>
+      <kitchen>Yes</kitchen>
+      <lat>52.52000659999999</lat>
+      <ling>13.404953999999975</ling>
+      <livingroom>Yes</livingroom>
+      <minimum_charge>8</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>40/3/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>2</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>Yes</parking>
+      <pets>Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/40/3/</pictures_folder>
+      <refrigerator>Yes</refrigerator>
+      <room_name>b2</room_name>
+      <smoking>Allowed</smoking>
+      <tv>Yes</tv>
+      <type>Private Room</type>
+      <wifi>Yes</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="56">
+    <booked_date>14/9-17/9</booked_date>
+    <comment>You haven't leave a Comment</comment>
+    <comment_date />
+    <rating>4</rating>
+    <user user_id="49">
+      <username>irene</username>
+      <name>irene</name>
+      <surname>achtypi</surname>
+      <email>w</email>
+      <phone>w</phone>
+      <role>H</role>
+      <profile_picture>default.jpg</profile_picture>
+      <password>996a7fa078cc36c46d02f9af3bef918b</password>
+    </user>
+    <room room_id="36">
+      <address>budapest</address>
+      <area>2</area>
+      <location>Hungary</location>
+      <cost_per_person>4</cost_per_person>
+      <date>1/9-14/9:17/9-1/10</date>
+      <description>In my opinion, Gorillaz is one of the world's last remaining great bands.  What I mean by that is, they (he) doesn't seem to be doing for money or fame. If you have ever seen them in concert,</description>
+      <elevator>No</elevator>
+      <events>Not Allowed</events>
+      <heating>Yes</heating>
+      <info>In my opinion, Gorillaz is one of the world's last remaining great bands.  What I mean by that is, they (he) doesn't seem to be doing for money or fame. If you have ever seen them in concert,</info>
+      <kitchen>Yes</kitchen>
+      <lat>47.497912</lat>
+      <ling>19.04023499999994</ling>
+      <livingroom>No</livingroom>
+      <minimum_charge>10</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>37/2/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>3</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>No</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/37/2/</pictures_folder>
+      <refrigerator>No</refrigerator>
+      <room_name>BudaAp</room_name>
+      <smoking>Allowed</smoking>
+      <tv>Yes</tv>
+      <type>Private Room</type>
+      <wifi>No</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="57">
+    <booked_date>27/9-30/9</booked_date>
+    <comment>You haven't leave a Comment</comment>
+    <comment_date />
+    <rating>5</rating>
+    <user user_id="49">
+      <username>irene</username>
+      <name>irene</name>
+      <surname>achtypi</surname>
+      <email>w</email>
+      <phone>w</phone>
+      <role>H</role>
+      <profile_picture>default.jpg</profile_picture>
+      <password>996a7fa078cc36c46d02f9af3bef918b</password>
+    </user>
+    <room room_id="38">
+      <address>Berlin</address>
+      <area>2</area>
+      <location>BERLIN</location>
+      <cost_per_person>8</cost_per_person>
+      <date>4/9-6/9:9/9-27/9:30/9-1/10</date>
+      <description>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</description>
+      <elevator>No</elevator>
+      <events>Not Allowed</events>
+      <heating>No</heating>
+      <info>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</info>
+      <kitchen>No</kitchen>
+      <lat>52.52000659999999</lat>
+      <ling>13.404953999999975</ling>
+      <livingroom>Yes</livingroom>
+      <minimum_charge>2</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>30/3/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>2</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>No</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/30/3/</pictures_folder>
+      <refrigerator>Yes</refrigerator>
+      <room_name>berlinsRooms</room_name>
+      <smoking>Not Allowed</smoking>
+      <tv>No</tv>
+      <type>Private Room</type>
+      <wifi>Yes</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="58">
+    <booked_date>1/9-4/9</booked_date>
+    <comment>You haven't leave a Comment</comment>
+    <comment_date />
+    <rating>0</rating>
+    <user user_id="49">
+      <username>irene</username>
+      <name>irene</name>
+      <surname>achtypi</surname>
+      <email>w</email>
+      <phone>w</phone>
+      <role>H</role>
+      <profile_picture>default.jpg</profile_picture>
+      <password>996a7fa078cc36c46d02f9af3bef918b</password>
+    </user>
+    <room room_id="38">
+      <address>Berlin</address>
+      <area>2</area>
+      <location>BERLIN</location>
+      <cost_per_person>8</cost_per_person>
+      <date>4/9-6/9:9/9-27/9:30/9-1/10</date>
+      <description>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</description>
+      <elevator>No</elevator>
+      <events>Not Allowed</events>
+      <heating>No</heating>
+      <info>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</info>
+      <kitchen>No</kitchen>
+      <lat>52.52000659999999</lat>
+      <ling>13.404953999999975</ling>
+      <livingroom>Yes</livingroom>
+      <minimum_charge>2</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>30/3/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>2</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>No</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/30/3/</pictures_folder>
+      <refrigerator>Yes</refrigerator>
+      <room_name>berlinsRooms</room_name>
+      <smoking>Not Allowed</smoking>
+      <tv>No</tv>
+      <type>Private Room</type>
+      <wifi>Yes</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="59">
+    <booked_date>1/9-4/9</booked_date>
+    <comment>You haven't leave a Comment</comment>
+    <comment_date />
+    <rating>2</rating>
+    <user user_id="49">
+      <username>irene</username>
+      <name>irene</name>
+      <surname>achtypi</surname>
+      <email>w</email>
+      <phone>w</phone>
+      <role>H</role>
+      <profile_picture>default.jpg</profile_picture>
+      <password>996a7fa078cc36c46d02f9af3bef918b</password>
+    </user>
+    <room room_id="43">
+      <address>berlin</address>
+      <area>2</area>
+      <location>BERLIN</location>
+      <cost_per_person>7</cost_per_person>
+      <date>4/9-7/9:10/9-1/10</date>
+      <description>if(living_r=="") &#xD;
+    		living_r="NO";</description>
+      <elevator>NO</elevator>
+      <events>Not Allowed</events>
+      <heating>NO</heating>
+      <info>if(living_r=="") &#xD;
+    		living_r="NO";</info>
+      <kitchen>NO</kitchen>
+      <lat>52.52000659999999</lat>
+      <ling>13.404953999999975</ling>
+      <livingroom>NO</livingroom>
+      <minimum_charge>7</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>40/4/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>2</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>NO</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/40/4/</pictures_folder>
+      <refrigerator>NO</refrigerator>
+      <room_name>b3</room_name>
+      <smoking>Allowed</smoking>
+      <tv>NO</tv>
+      <type>Private Room</type>
+      <wifi>NO</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="60">
+    <booked_date>6/9-9/9</booked_date>
+    <comment>ejairethko!</comment>
+    <comment_date>2017/09/28</comment_date>
+    <rating>5</rating>
+    <user user_id="30">
+      <username>kk</username>
+      <name>k_name</name>
+      <surname>k</surname>
+      <email>k</email>
+      <phone>kk</phone>
+      <role>H</role>
+      <profile_picture>2-326525576614335793.jpg</profile_picture>
+      <password>8ce4b16b22b58894aa86c421e8759df3</password>
+    </user>
+    <room room_id="38">
+      <address>Berlin</address>
+      <area>2</area>
+      <location>BERLIN</location>
+      <cost_per_person>8</cost_per_person>
+      <date>4/9-6/9:9/9-27/9:30/9-1/10</date>
+      <description>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</description>
+      <elevator>No</elevator>
+      <events>Not Allowed</events>
+      <heating>No</heating>
+      <info>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</info>
+      <kitchen>No</kitchen>
+      <lat>52.52000659999999</lat>
+      <ling>13.404953999999975</ling>
+      <livingroom>Yes</livingroom>
+      <minimum_charge>2</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>30/3/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>2</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>No</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/30/3/</pictures_folder>
+      <refrigerator>Yes</refrigerator>
+      <room_name>berlinsRooms</room_name>
+      <smoking>Not Allowed</smoking>
+      <tv>No</tv>
+      <type>Private Room</type>
+      <wifi>Yes</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="61">
+    <booked_date>22/9-24/9</booked_date>
+    <comment>You haven't leave a Comment</comment>
+    <comment_date />
+    <rating>0</rating>
+    <user user_id="30">
+      <username>kk</username>
+      <name>k_name</name>
+      <surname>k</surname>
+      <email>k</email>
+      <phone>kk</phone>
+      <role>H</role>
+      <profile_picture>2-326525576614335793.jpg</profile_picture>
+      <password>8ce4b16b22b58894aa86c421e8759df3</password>
+    </user>
+    <room room_id="42">
+      <address>berlin</address>
+      <area>2</area>
+      <location>BERLIN</location>
+      <cost_per_person>8</cost_per_person>
+      <date>1/9-5/9:18/9-19/9:21/9-22/9:24/9-28/9:30/9-1/10</date>
+      <description>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</description>
+      <elevator>Yes</elevator>
+      <events>Allowed</events>
+      <heating>Yes</heating>
+      <info>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</info>
+      <kitchen>Yes</kitchen>
+      <lat>52.52000659999999</lat>
+      <ling>13.404953999999975</ling>
+      <livingroom>Yes</livingroom>
+      <minimum_charge>8</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>40/3/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>2</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>Yes</parking>
+      <pets>Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/40/3/</pictures_folder>
+      <refrigerator>Yes</refrigerator>
+      <room_name>b2</room_name>
+      <smoking>Allowed</smoking>
+      <tv>Yes</tv>
+      <type>Private Room</type>
+      <wifi>Yes</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="62">
+    <booked_date>5/9-7/9</booked_date>
+    <comment>You haven't leave a Comment</comment>
+    <comment_date />
+    <rating>3</rating>
+    <user user_id="37">
+      <username>k</username>
+      <name>k_name</name>
+      <surname>k</surname>
+      <email>k_email</email>
+      <phone>kkkkk</phone>
+      <role>H</role>
+      <profile_picture>default.jpg</profile_picture>
+      <password>8ce4b16b22b58894aa86c421e8759df3</password>
+    </user>
+    <room room_id="46">
+      <address>warasw</address>
+      <area>2</area>
+      <location>POLAND</location>
+      <cost_per_person>8</cost_per_person>
+      <date>1/9-2/9:7/9-15/9:18/9-26/9:30/9-1/10</date>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</description>
+      <elevator>No</elevator>
+      <events>Not Allowed</events>
+      <heating>No</heating>
+      <info>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</info>
+      <kitchen>No</kitchen>
+      <lat>52.2296756</lat>
+      <ling>21.012228700000037</ling>
+      <livingroom>No</livingroom>
+      <minimum_charge>2</minimum_charge>
+      <minimum_days>1</minimum_days>
+      <main_picture>59/2/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>5</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>No</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/59/2/</pictures_folder>
+      <refrigerator>No</refrigerator>
+      <room_name>polandRoom</room_name>
+      <smoking>Allowed</smoking>
+      <tv>No</tv>
+      <type>Apartment</type>
+      <wifi>No</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="63">
+    <booked_date>19/9-21/9</booked_date>
+    <comment>entupwsiako meros</comment>
+    <comment_date>2017/09/29</comment_date>
+    <rating>4</rating>
+    <user user_id="60">
+      <username>last</username>
+      <name>last</name>
+      <surname>last</surname>
+      <email>last</email>
+      <phone>last</phone>
+      <role>H</role>
+      <profile_picture>Selection_007-5010092857108448383.png</profile_picture>
+      <password>98bd1c45684cf587ac2347a92dd7bb51</password>
+    </user>
+    <room room_id="42">
+      <address>berlin</address>
+      <area>2</area>
+      <location>BERLIN</location>
+      <cost_per_person>8</cost_per_person>
+      <date>1/9-5/9:18/9-19/9:21/9-22/9:24/9-28/9:30/9-1/10</date>
+      <description>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</description>
+      <elevator>Yes</elevator>
+      <events>Allowed</events>
+      <heating>Yes</heating>
+      <info>PK starstorm Oh I thought it was about having a dark period, having those "demon days", because november is a rainy month full of negativaty and about who "killed" Noodle in El Mañana because 2D sings "where did he go" with "he" being the killer?</info>
+      <kitchen>Yes</kitchen>
+      <lat>52.52000659999999</lat>
+      <ling>13.404953999999975</ling>
+      <livingroom>Yes</livingroom>
+      <minimum_charge>8</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>40/3/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>2</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>Yes</parking>
+      <pets>Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/40/3/</pictures_folder>
+      <refrigerator>Yes</refrigerator>
+      <room_name>b2</room_name>
+      <smoking>Allowed</smoking>
+      <tv>Yes</tv>
+      <type>Private Room</type>
+      <wifi>Yes</wifi>
+    </room>
+  </UserRoomInteractions>
+  <UserRoomInteractions interaction_id="64">
+    <booked_date>20/9-24/9</booked_date>
+    <comment>perfecto</comment>
+    <comment_date>2017/09/29</comment_date>
+    <rating>5</rating>
+    <user user_id="60">
+      <username>last</username>
+      <name>last</name>
+      <surname>last</surname>
+      <email>last</email>
+      <phone>last</phone>
+      <role>H</role>
+      <profile_picture>Selection_007-5010092857108448383.png</profile_picture>
+      <password>98bd1c45684cf587ac2347a92dd7bb51</password>
+    </user>
+    <room room_id="44">
+      <address>berlin</address>
+      <area>2</area>
+      <location>BERLIN</location>
+      <cost_per_person>2</cost_per_person>
+      <date>4/9-6/9:8/9-20/9:24/9-25/9:30/9-1/10</date>
+      <description>? ??????? ??? ?????? ???? ???? ??? ???????? ???? ?????? ?? ???????????? ??????? , ????? ??? ????????? ??? ????? ??? ???? ?? ?????????? ??? ??? ?? ???????? , ???? ???????? ?????? ??? ????????? ???????????? !</description>
+      <elevator>NO</elevator>
+      <events>Not Allowed</events>
+      <heating>NO</heating>
+      <info>? ??????? ??? ?????? ???? ???? ??? ???????? ???? ?????? ?? ???????????? ??????? , ????? ??? ????????? ??? ????? ??? ???? ?? ?????????? ??? ??? ?? ???????? , ???? ???????? ?????? ??? ????????? ???????????? !</info>
+      <kitchen>NO</kitchen>
+      <lat>52.52000659999999</lat>
+      <ling>13.404953999999975</ling>
+      <livingroom>NO</livingroom>
+      <minimum_charge>4</minimum_charge>
+      <minimum_days>2</minimum_days>
+      <main_picture>40/5/main.jpg</main_picture>
+      <no_baths>2</no_baths>
+      <no_beds>2</no_beds>
+      <maximum_people>3</maximum_people>
+      <no_rooms>2</no_rooms>
+      <parking>NO</parking>
+      <pets>Not Allowed</pets>
+      <pictures_folder>/home/giwrgosmandi/eclipse-workspace/Airbnb/WebContent/resources/apartments/40/5/</pictures_folder>
+      <refrigerator>NO</refrigerator>
+      <room_name>b4</room_name>
+      <smoking>Not Allowed</smoking>
+      <tv>NO</tv>
+      <type>Shared Room</type>
+      <wifi>NO</wifi>
+    </room>
+  </UserRoomInteractions>
+</UserRoomInteractions>
+

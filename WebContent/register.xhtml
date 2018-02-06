@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<ui:composition template="/WEB-INF/templates/masterTemplate.xhtml"
+    xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:t="http://myfaces.apache.org/tomahawk"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+ >
+ 
+<!-- registration form -->
+	<ui:define name="title">Register</ui:define>
+
+
+
+<ui:define name="content">	
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<div class="container">
+	<h:outputStylesheet library="css" name="buttons.css"  />
+
+	<h:form id="register" enctype="multipart/form-data">
+		<h3 >Registration Page</h3><br/>
+		
+		<div class="form-group">
+		<label for="username">Username	</label>
+		<br/><h:inputText id="username" value="#{register.username}"  binding="#{register.username_UI}" class="form-control" style="width: 30%;"/>
+		<h:message for="username" style="color:red;"/>
+		</div>
+		
+		<div class="form-group">
+		<label>Password	</label>
+		<br/><h:inputSecret id="password" value="#{register.password}" binding="#{register.password_UI}" class="form-control" style="width: 30%;"/>
+		<h:message for="password" style="color:red;"/>
+		</div>
+		
+		<div class="form-group">
+		<label>Confirm Password</label>
+		<br/><h:inputSecret id="c_password" value="#{register.c_password}" binding="#{register.c_password_UI}" class="form-control" style="width: 30%;"/>
+		<h:message for="c_password" style="color:red;"/>
+		</div>
+		
+		<div class="form-group">
+		<label>Name</label>
+		<br/><h:inputText id="name" value="#{register.name}" binding="#{register.name_UI}" class="form-control" style="width: 30%;" />
+		<h:message for="name" style="color:red;"/>
+		</div>
+		
+		<div class="form-group">
+		<label>Surname</label>
+		<br/><h:inputText id="surname" value="#{register.surname}" binding="#{register.surname_UI}" class="form-control" style="width: 30%;" />
+		<h:message for="surname" style="color:red;"/>
+		</div>
+		
+		<div class="form-group">
+		<label>Email</label>
+		<br/><h:inputText id="email" value="#{register.email}" binding="#{register.email_UI}" class="form-control" style="width: 30%;"/>
+		<h:message for="email" style="color:red;"/>
+		</div>
+		
+		<div class="form-group">
+		<label>Phone number</label>
+		<br/><h:inputText id="phone" value="#{register.phone}" binding="#{register.phone_UI}" class="form-control" style="width: 30%;"/>
+		<h:message for="phone" style="color:red;"/>
+		</div>
+		
+		<div class="form-group">
+		<label>Register as</label>
+		<h:selectOneRadio id="role" value="#{register.role}" binding="#{register.role_UI}" layout="pageDirection">
+   			<f:selectItem itemValue="U" itemLabel="Typical User" /><br/>
+   			<f:selectItem itemValue="H" itemLabel="Host and Typical User" />
+		</h:selectOneRadio>
+		<h:message for="role" style="color:red;"/>
+		</div>
+		
+		<div class="form-group">
+		<label>Choose a picture to use as Profile picture</label>
+		<p:fileUpload value="#{register.profile_pic}"	mode="simple"  id="upload"   binding="#{register.profile_pic_UI}" />
+		 <h:message for="upload" style="color:red;" />
+		</div>
+		
+		<br/><h:commandButton  class="button" value="Register"  action="#{register.registerControl()}" ></h:commandButton>
+	</h:form>
+</div>
+	
+</ui:define>
+	
+	
+	
+</ui:composition>

@@ -1,0 +1,81 @@
+<ui:composition template="/WEB-INF/templates/masterTemplate.xhtml"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui" 
+
+    >
+
+
+	<ui:define name="title">Edit Profile</ui:define>
+	<ui:define name="content">	
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+	<h:outputStylesheet library="css" name="buttons.css"  />
+	<h:outputStylesheet  library="css" name = "profile.css" />
+	<br/><br/><br/>
+	<h:panelGroup class="form" rendered="#{profile.other_panel()}">
+		<h:form >
+			<h2>Edit #{profile.editing_field} </h2>
+			<h4>
+				Old #{profile.editing_field}: #{profile.old_value}
+				<br/><label for="input">New #{profile.editing_field} </label> 
+				<h:inputText id="input" value="#{profile.new_value}" />
+				<br/><h:commandButton  class="button button1" id="button_1" action="#{profile.edit()}"
+					 value="Change" binding="#{profile.button1_UI}" />
+				<br/>
+				<h:message  id="error_message_1" for="button_1"  style="color:red;margin:8px;" autoUpdate="true" />
+			</h4>
+		</h:form>
+	</h:panelGroup>
+	<h:panelGroup class="form" rendered="#{profile.role_panel()}" >
+		<h:form>
+			<h4>Choose Role</h4>
+			<br/>old #{profile.editing_field}: #{profile.old_value}
+			<br/><label>Role</label>
+			<h:selectOneRadio id="role" value="#{profile.new_value}" layout="pageDirection">
+   				<f:selectItem itemValue="U" itemLabel="Typical User" />
+   				<f:selectItem itemValue="H" itemLabel="Host and Typical User" />
+			</h:selectOneRadio>
+			<br/><h:commandButton class="button button1" action="#{profile.edit()}"
+					 value="Change"  />
+			
+		</h:form>
+	</h:panelGroup>
+	<h:panelGroup class="form" rendered="#{profile.pwd_panel()}">
+		<h:form>
+		<div class="form-group">
+			<br/><label>Give Old Password</label>
+			<h:inputSecret value="#{profile.old_value}" class="form-control" style="width: 130%;" />
+			<br/><label>Give New Password</label>
+			<h:inputSecret value="#{profile.new_value}" class="form-control" style="width: 130%;" />
+			<br/><label>Confirm New Password</label>
+			<h:inputSecret value="#{profile.c_pwd}" class="form-control" style="width: 130%;" />
+			<br/><h:commandButton class="button button1" id="button_2" action="#{profile.edit()}"
+					 value="Change" binding="#{profile.button2_UI}"/>
+		</div>
+		<br/><br/><br/>
+		<h:message id="error_message_2" for="button_2"  style="color:red;margin:8px;" autoUpdate="true" />
+		</h:form>
+	</h:panelGroup>
+	<h:panelGroup class="form" rendered="#{profile.pic_panel()}">
+		<h:form enctype="multipart/form-data">
+		<label>Profile Picture</label>
+			<h:graphicImage  library="user_images" name="#{profile.old_value}" style="width:250px;height:250px;" /><br/>
+			<br/><label>Choose a picture to use as Profile picture</label>
+			<p:fileUpload id="upload"  value="#{profile.new_pic}"  mode="simple"/>
+			<br/><h:commandButton class="button button1" id="button_3" action="#{profile.edit()}"
+					 value="Change" binding="#{profile.button3_UI}"/>
+		
+			<br/><br/><br/>
+			<h:message id="error_message_3" for="button_3"  style="color:red;margin:8px;" autoUpdate="true" />
+		</h:form>
+	</h:panelGroup>
+	<br/>
+	
+	</ui:define>
+</ui:composition>

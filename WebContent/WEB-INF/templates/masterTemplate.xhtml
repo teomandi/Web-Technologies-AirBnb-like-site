@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets" 
+>
+    <h:head>
+        <title>
+            <ui:insert name="title">Some title</ui:insert>
+        </title>  
+        <style>
+        	
+        	.Bimage{
+     			background-image:url("../resources/img/background_1.jpg");
+     			
+ 			}
+        
+        </style> 
+        
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsi-l6PIBmD-rxRR4f-pQnidwZXGRms1U"  type="text/javascript"/>
+  		<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" />
+  		 
+  		
+    </h:head>
+
+    <ui:include src="header.xhtml"/>
+	
+    <h:body styleClass="Bimage" >
+    <div id="content">
+        <ui:insert name="content" />
+    </div>
+    </h:body>
+
+<!--     <ui:include src="footer.xhtml"/> -->
+
+</html>
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+ >
+ 
+ 
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style>
+	
+	.side{
+		position:absolute;
+    	left:73%;
+    	top:200px;"
+	}
+	
+	.cells{
+		border: 4px groove #4CAF50;
+    	padding: 10px 40px; 
+   		background: #A9A9A9;
+    	width: 400px;
+    	border-radius: 25px;
+    	margin:10px;
+    	height:180px;
+
+	}
+	</style>
+</h:head>
+<h:body>
+
+	<h:panelGroup rendered="#{result.render_recommendetion}" class="side" >
+		<h3>recommended rooms for you</h3>
+	 	<ui:repeat var="r" value="#{result.recommended_rooms}" varStatus="status"> 
+	 		<h:link  outcome="room_page.xhtml" >	 
+				<div class="cells" style="display:inline-block;font-size:120%;">
+					<table>
+						<tr>
+							<td>
+								<h:graphicImage library="apartments" name="#{r.mainPic}"   style="width:150px;height:100px;display:inline-block;"/>
+							</td>
+							
+							<td style="display:inline-block;width:170px;margin:10px;">
+									<span style="color:#3f9b43; ">Name:</span> #{r.roomName}<br/>
+									<span style="color:#3f9b43;">Location:</span> #{r.location}<br/>
+									<span style="color:#3f9b43;">Cost per day:</span> #{r.cpp}$<br/>
+									<p:rating value="#{r.rating}" readonly="true" /><br/>
+									<span style="color:#3f9b43;">Ratings: </span> #{r.noRatings}<br/>
+							</td>
+						</tr>
+						<f:param name="id" value="#{r.roomId}" />
+					</table>		
+				</div>
+			</h:link>
+	 	</ui:repeat>	
+	</h:panelGroup>
+
+</h:body>
+</html>

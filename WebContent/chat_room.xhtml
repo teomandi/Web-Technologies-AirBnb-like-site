@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<ui:composition template="/WEB-INF/templates/masterTemplate.xhtml"
+    xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:t="http://myfaces.apache.org/tomahawk"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+ >
+    <ui:define name="title">Chat Room</ui:define>
+	
+	<ui:define name="content">
+		<h:outputStylesheet library="css" name="buttons.css"  />
+		<h:outputStylesheet library="css" name="host.css"  />
+	
+		<h:form class="form" >
+			<!-- olous tous opoious exei epikoinwnhsei h touxoun epikoinwnhsei -->
+			<h1>chating Room</h1><br/><br/>
+			<h3> Contacts</h3>
+			<br/>
+			<ui:repeat var="c" value="#{chat.chats}" varStatus="status"> 
+				<h:commandButton value="#{chat.contact_name(status.index)}"  class="button button_blue" >
+					<f:param name="reciever" value="#{chat.contact_name(status.index)}" />
+				</h:commandButton>
+ 			</ui:repeat>
+ 			
+ 			
+ 			
+ 			<br/><br/>
+ 			 			
+ 			<h:form class="form" rendered="#{chat.render_messages()}">
+ 			<!-- deixnei ta mhnumata -->
+			<h3>Messages with "#{chat.reciever.getUsername()}"</h3>		
+			
+			<ui:repeat var="msg" value="#{chat.chat.getChatMessages()}" varStatus="status" > 
+				<div class="cells" style="display:inline-block;font-size:120%;">
+				<table >
+					<tr>
+						<td>
+							<h:graphicImage library="user_images" name="#{msg.getUser().profilePic}"  style="width:100px;height:100px;display:inline-block;" />
+						</td>
+						
+						<td style="width:500px;display:inline-block;margin-left:50px;" >
+							<span style="color:#3f9b43;" >#{msg.getUser().username}</span>
+							"#{msg.message}"
+						</td>		
+					</tr>
+					</table>	
+				</div>
+				<h:commandButton class="button button1" value="Delete" rendered="#{chat.render_deleteMsg()}" style="position:relative;left:2%;" action="#{chat.deleteMsg(status.index)}" />
+ 			</ui:repeat>
+ 			
+			<h:inputTextarea id="info" value="#{chat.message}" cols="50" rows="10" maxlength="400" style="width:50%;height:100px;" />
+			<br/>
+			<h:commandButton class="button button1" value="Sent"  action="#{chat.sent_message()}" />
+		
+		</h:form>
+ 			
+ 			<br/><br/><br/><br/><br/><br/>
+		
+			
+		</h:form>
+	
+		
+	</ui:define>
+</ui:composition>
+	

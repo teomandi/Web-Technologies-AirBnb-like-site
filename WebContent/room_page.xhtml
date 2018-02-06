@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<ui:composition template="/WEB-INF/templates/masterTemplate.xhtml"
+    xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:t="http://myfaces.apache.org/tomahawk"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+ >
+ <!-- apeikonizei to room -->
+    <ui:define name="title">Room Page</ui:define>
+	
+	<ui:define name="content">	
+		<h:outputStylesheet library="css" name="buttons.css"  />
+		<h:outputStylesheet library="css" name="host.css"  />
+			
+			<h:form class="form">
+				<div style="display:inline-block;">
+					<h2>Room :#{room.room.getRoomName()} <br/> Type: #{room.room.getType()} </h2>
+				</div>
+				<div style="display:inline-block;position:relative;left:180px;bottom:30px;">
+					<h2>Rating</h2>
+					<p:rating value="#{room.room.getRating()}" readonly="true" />
+				</div>
+				
+				<!-- gia epikoinwnia me ton host...emfanes mono an o xrhsths einai sundedemenos -->
+				<div style="display:inline-block;position:relative;left:300px;bottom:30px;" >
+					<h:commandButton value="Message Host"  class="button" action="#{room.message_host}"  rendered="#{room.render_chatBtn()}" />
+				</div>
+			
+			</h:form>
+			
+			
+			<h:graphicImage library="apartments" name="#{room.room.getMainPic()}"  style="position:relative;left:15%;width:60%;height:300px;display:inline-block;margin:10px;"/>
+			
+			<br/><br/>
+			
+			<h:form class="form">
+				<h:commandButton class="button button1"  value="Edit main Picture" rendered="#{room.render_edit()}" action="#{room.edit_main_pic()}" />
+			</h:form>
+			
+			<br/><br/>
+			
+		<h:form class="form">
+			<h2>Information about the apartment</h2>
+			<div style="font-size:150%;display:inline-block;" >
+				<div style="display:inline-block;"><span style="color:#3f9b43;" >Number of beds: </span> #{room.room.getNoBeds()}</div>
+				<div class="column4" ><span  style="color:#3f9b43;" >Number of baths: </span> #{room.room.getNoBaths()}</div>
+				<div class="column5" ><span  style="color:#3f9b43;" >Type of Apartment: </span> #{room.room.getType()}</div><br/>
+				<div style="display:inline-block;"><span style="color:#3f9b43;" >Number of rooms: </span> #{room.room.getNoRooms()}</div>
+				<div class="column4" ><span style="color:#3f9b43;" >Area of the apartment: </span> #{room.room.getArea()}</div>
+				<div class="column5" ><span style="color:#3f9b43;" >Living room: </span> #{room.room.getLivingroom()}</div>
+			</div>
+			<br/><br/>
+			<h:commandButton class="button button1" value="Edit Informations" rendered="#{room.render_edit()}"   action="#{room.edit_info()}" />
+			<br/><br/>
+			<h2>Description</h2>
+			<div class="text" style="font-size:150%;">
+				#{room.room.getDescription()}
+			</div>
+			<br/><br/>
+			<h:commandButton class="button button1" value="Edit Descriptions" rendered="#{room.render_edit()}"   action="#{room.edit_description()}" />
+			
+			<br/><br/>
+			
+			<h2>Rules</h2>
+			<div style="font-size:150%;display:inline-block;" >
+				<div style="display:inline-block;"><span style="color:#4CAF50;" >Smoking rules: </span> #{room.room.getSmoking()}</div>
+				<div class="column4" ><span  style="color:#4CAF50;" >Pet Rule: </span> #{room.room.getPets()}</div>
+				<div class="column5" ><span  style="color:#4CAF50;" >Events Rule: </span> #{room.room.getEvents()}</div><br/>
+			</div>
+			
+			
+			<br/><br/>
+			
+			<div style="font-size:150%;display:inline-block;" >
+				<div style="display:inline-block;"><span style="color:#3f9b43;" >Minimum number of rental days : </span> #{room.room.getMDays()} </div>
+				<div class="column5"><span  style="color:#3f9b43;" >Maximum number of people : </span> #{room.room.getNoPeople()} </div>
+			</div>
+			
+			<br/><br/>
+			<h:commandButton class="button button1" value="Edit Rules" rendered="#{room.render_edit()}"  action="#{room.edit_rules()}" />
+			
+			<br/><br/>
+		</h:form>
+		
+		<br/><br/>
+			
+		<p:gmap id="geoGmap" widgetVar="geoMap" center="#{room.centerGeoMap}" zoom="10" type="ROADMAP"  model="#{room.simpleModel}"
+			 style="position:relative;left:15%;width:60%;height:300px;" >
+		</p:gmap>
+		
+		
+		<br/><br/>
+		
+		<div class="form" style="font-size:150%;display:inline-block;" >
+			<div style="display:inline-block;"><span style="color:#3f9b43;" >Address: </span> #{room.room.getAddress()}</div>
+			
+			<div class="column5" ><span  style="color:#3f9b43;" >Location: </span> #{room.room.getLocation()} </div>
+		</div>
+		
+			<br/><br/><br/>
+			
+			
+			<br/><br/>
+		<div class="form" style="font-size:150%;display:inline-block;" >
+			<h2>How to reach this place</h2>
+			<div class="text">
+				#{room.room.getInfo()}
+			</div>
+		</div>	
+		
+		<h:form class="form">
+			<h:commandButton class="button button1" value="Edit Location" rendered="#{room.render_edit()}"  action="#{room.edit_location()}" />
+		</h:form>		
+		
+		<br/><br/><br/>
+		<p:galleria value="#{room.images}" var="image" panelWidth="600" panelHeight="313" showCaption="true" style="position:relative;left:24%;">
+    		<p:graphicImage name="#{image}" alt="Image Description for #{image}" title="#{image}" style="width:600px;height:313px;"/>
+		</p:galleria>
+			
+		<br/><br/>
+		
+		<h:form class="form">
+			<h:commandButton class="button button1" value="Edit Pictures" rendered="#{room.render_edit()}" action="#{room.edit_pictures()}" />
+		</h:form>
+		
+		<br/><br/><br/><br/>
+		
+		<div class="form" style="font-size:150%;" >
+			<h2>More Informations</h2>
+			
+			<br/>
+			
+			<div>
+				<h2>Dates that is available (day/month): #{room.room.getDate()}</h2> 
+			</div>
+			
+			<br/><br/>
+			
+			
+			<div style="display:inline-block;"><span style="color:#3f9b43;" >Cost per person: </span> #{room.room.getCpp()}$</div>
+				<div class="column4" ><span  style="color:#3f9b43;" >Minimum Charge </span> #{room.room.getMCharge()}$</div>
+				<div class="column5" ><span  style="color:#3f9b43;" >Maximum number of people: </span> #{room.room.getNoPeople()}</div><br/><br/>
+				
+				<div style="display:inline-block;"><span style="color:#3f9b43;" >Elevator: </span> #{room.room.getElevator()}</div>
+				<div class="column4" ><span style="color:#3f9b43;" >Refrigerator: </span> #{room.room.getRefrigerator()}</div>
+				<div class="column5" ><span style="color:#3f9b43;" >Heating: </span> #{room.room.getHeating()}</div><br/><br/>
+					
+				<div style="display:inline-block;"><span style="color:#3f9b43;" >Wifi: </span> #{room.room.getWifi()}</div>
+				<div class="column4" ><span style="color:#3f9b43;" >Kitchen: </span> #{room.room.getRefrigerator()}</div>
+				<div class="column5" ><span  style="color:#3f9b43;" >TV: </span> #{room.room.getTv()}</div><br/><br/>
+				
+				<div class="column4" ><span style="color:#3f9b43;" >Available parking space: </span> #{room.room.getParking()}</div><br/>
+			
+		</div>
+		
+		<br/><br/><br/><br/>
+		<!-- rating kai comment mono an o xrhsths exei klisei to dwmatio -->
+		<h:form class="form" rendered="#{room.render_rating()}">
+			<h3>Rate the Room/Apartment</h3>
+			<p:rating value="#{room.rating}"  />
+			<h:commandButton value="Rate" class="button" action="#{room.rate()}" style="margin-left:200px;"/>
+	
+		
+			<br/><br/><br/><br/>
+							
+		
+			<h3>Write Your Comment here</h3>			
+			<h:inputTextarea id="info" value="#{room.comment}" cols="50" rows="10" maxlength="400" style="width:50%;height:100px;" />
+			<br/>
+			<h:commandButton class="button button1" value="Comment"  action="#{room.Comment()}" />
+		</h:form>
+		
+			<br/><br/><br/><br/>
+		<!-- comments -->
+		<h:form class="form">
+			<h3>Comments</h3>		
+			<ui:repeat var="com" value="#{room.comment_list}" varStatus="myVarStatus"> 
+				<div class="cells" style="display:inline-block;font-size:120%;">
+				<table >
+					<tr>
+						<td>
+							<h:graphicImage library="user_images" name="#{com.getUser().getProfilePic()}"  style="width:100px;height:100px;display:inline-block;" />
+						</td>
+						
+						<td style="width:500px;display:inline-block;margin-left:50px">
+							<span style="color:#3f9b43;" >#{com.getUser().getUsername()}</span>
+							"#{com.comment}"
+							<span style="color:#3f9b43;" >#{com.commentDate}</span><br/>
+							<p:rating value="#{com.getRating()}" readonly="true" />
+						</td>		
+					</tr>
+					</table>	
+				</div>
+				<h:commandButton style="display:inline-block;position:relative;left:100px;" class="button" 
+				value="Delete Comment" rendered="#{room.render_edit()}"  action="#{room.deleteComment(myVarStatus.index)}" />
+ 			</ui:repeat>
+		</h:form>
+		
+		<br/><br/><br/><br/>
+		
+		<ui:include src="/WEB-INF/templates/side_bookRoom.xhtml"/>
+	</ui:define>
+</ui:composition>

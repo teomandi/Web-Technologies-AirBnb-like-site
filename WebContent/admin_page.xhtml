@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<ui:composition template="/WEB-INF/templates/masterTemplate.xhtml"
+    xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+ >
+ 
+
+	<ui:define name="title">Admin Page</ui:define>
+	
+	<ui:define name="content">	
+		<h:outputStylesheet library="css" name="admin_page.css"  />
+		<h:outputStylesheet library="css" name="buttons.css"  />
+		
+		<!-- to view me th lista -->
+		<h:panelGroup  rendered="#{admin.render_admin}">
+		<h:panelGroup  rendered="#{admin.render_datatable}">
+		<h:form class="form2"  >
+		
+			<h2>Welcome Admin  </h2><br/>
+			
+			<div class="btn-group side" >
+				<h:commandButton id="btn" value="Produce Users.xml" class="button2" action="#{admin.produce_userXml()}" binding="#{admin.messages_UI}" update="message"/>
+				<h:commandButton id="btn2" value="Produce Rooms.xml" class="button2" action="#{admin.produce_roomXml()}" binding="#{admin.messages2_UI}" update="message2"/>
+				<h:commandButton id="btn3" value="Produce URI.xml" class="button2" action="#{admin.produce_URIXml()}" binding="#{admin.messages3_UI}" update="message3"/>
+			</div>
+			
+			<h:message for="btn" style="color:green;margin:8px;font-size:150%;width:200px;" id="message" />
+			<h:message for="btn2" style="color:green;margin:8px;font-size:150%;width:200px;" id="message2" />
+			<h:message for="btn3" style="color:green;margin:8px;font-size:150%;width:200px;" id="message3" />
+			
+			<h:dataTable value="#{admin.results}" var="u"
+				binding="#{admin.datatable}"
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+    			>
+
+    			<h:column>
+    				<f:facet name="header">User ID</f:facet>
+    				#{u.getUserId()}
+    			</h:column>
+
+    			<h:column>
+    				<f:facet name="header">Username</f:facet>
+    				#{u.getUsername()}
+    			</h:column>
+    			<h:column>
+    				<!-- column header -->
+    				<f:facet name="header">Name</f:facet>
+    				<!-- row record -->
+    				#{u.getName()}
+    			</h:column>
+    			<h:column>
+    				<f:facet name="header">Surname</f:facet>
+    				#{u.getSurname()}
+    			</h:column>
+    			<h:column>
+    				<f:facet name="header">Email</f:facet>
+    				#{u.getEmail()}
+    			</h:column>
+    			<h:column>
+    				<f:facet name="header">Role</f:facet>
+    				#{u.getRole()}
+    			</h:column>
+    			<h:column>
+    				<f:facet name="header">Approved</f:facet>
+    				#{u.getAApprove()}
+    			</h:column>
+    			<h:column>
+    				<h:commandButton  class="button button1" value="view Profile" action="#{admin.view_profile()}" />
+    			</h:column>
+
+    		</h:dataTable>
+    		<br/><br/><br/><br/>
+    	</h:form>
+    	</h:panelGroup>
+    	
+    	<!--  to view tou profile tou xrhsth -->
+    	<h:form  rendered="#{not admin.render_datatable}" >
+			<h2 class="form">Profile Page of #{admin.name} #{admin.surname}</h2><br/>
+			<div id="pic">
+				<h:graphicImage  library="user_images" name="#{admin.profile_pic}" style="width:250px;height:250px;margin-left:30px" /><br/>
+			</div>
+			
+			<br/><h3 class="form">Username:  #{admin.getUsername()}</h3>
+			<br/>
+			<br/><h3 class="form" >Name: #{admin.name}</h3>
+			<br/>
+			<br/><h3 class="form">Surname:#{admin.surname}</h3>
+			<br/>
+			<br/><h3 class="form">email: #{admin.email}</h3>
+			<br/>
+			<br/><h3 class="form">phone: #{admin.phone}</h3>
+			<br/>		
+			<br/><h3 class="form">role: #{admin.role}</h3>	
+				<br/><br/><br/>
+				 <h:commandButton  class="button button1 form" value="Approve Registration"  
+					rendered="#{admin.enable_button()}" action="#{admin.approve()}" />
+					
+				<h:commandButton  class="disabled form" value="Approve Registration"  
+					rendered="#{not admin.enable_button()}" disabled="true" />
+			<br/><br/><br/><br/>
+		
+
+    	</h:form>
+    </h:panelGroup>
+	</ui:define>
+</ui:composition>

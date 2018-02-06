@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<ui:composition template="/WEB-INF/templates/masterTemplate.xhtml"
+    xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:t="http://myfaces.apache.org/tomahawk"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    
+ >
+ <!-- periexei ta forms ta opoia tha ginoun edit...to kathena emfanizetai mono
+ an einai to editing field -->
+    <ui:define name="title">Room Page</ui:define>
+	
+	<ui:define name="content">	
+		<h:outputStylesheet library="css" name="buttons.css"  />
+		<h:outputStylesheet library="css" name="host.css"  />
+		
+		
+		<script type="text/javascript">
+    		function geocode() {
+        		PF('geoMap').geocode(document.getElementById('address').value);
+   			 }
+ 
+		    function reverseGeocode() {
+    		    var lat = document.getElementById('lat').value,
+    	    	lng = document.getElementById('lng').value;
+ 	
+    		    PF('revGeoMap').reverseGeocode(lat, lng);
+	    	}
+		</script>
+	
+	
+		<h2 class="form">Editing #{room.editing_field}</h2>
+		
+		<br/><br/><br/>
+		
+		
+		
+		<h:panelGroup rendered="#{room.render_mainPic()}" class="form">
+			<h:form enctype="multipart/form-data">
+				<br/>	
+				<h3  style="color:#4CAF50;">Dont fill the fields you don't want to edit.</h3>
+				<br/><br/>
+				<label>Give the main picture for your apartment</label>
+					<p:fileUpload value="#{room.main_pic}"	mode="simple"              	 
+               		   	sizeLimit="100000"  id="main_pic"  binding="#{room.main_pic_UI}" />
+               		  <br/>
+                <h:message for="main_pic" style="color:red;"/>
+                <br/><br/>
+                <h:commandButton class="button button1" value="Edit" action="#{room.edit()}" />
+               
+        	</h:form>
+         	<br/><br/>
+		</h:panelGroup>
+		
+		
+		
+		
+		
+		
+		<h:panelGroup rendered="#{room.render_info()}" class="form">
+		
+			<h:form>
+				<br/>
+				<h3  style="color:#4CAF50;">Dont fill the fields you don't want to edit.</h3>
+				<br/><br/>
+		
+				<label>How do you name your apartment?</label>
+				<h:inputText id="name" value="#{room.username}"  style="position:absolute;left:350px;"  />
+				<br/>
+				<h:message for="name" style="color:red;margin:8px;" />
+			
+				<br/><br/>
+			
+				<label>Give the minimum charge. ($)</label>
+				<h:inputText id="m_charge" style="position:absolute;left:350px;" value="#{room.m_charge}" 
+					converterMessage="Please enter digits only." binding="#{host.m_charge_UI}" />
+				<br/>
+				<h:message for="m_charge" style="color:red;margin:8px;" />
+			
+				<br/><br/>
+			
+				<label>Give the charge per person. ($)</label>
+				<h:inputText id="cpp" style="position:absolute;left:350px;" value="#{room.cpp}" converterMessage="Please enter digits only." 
+					binding="#{room.cpp_UI}" />
+				<br/>
+				<h:message for="cpp" style="color:red;margin:8px;" />
+			
+				<br/><br/>
+			
+				<h3>Give the starting date that the apartment is available</h3><br/>
+				<h4>(for example 1-1 for 1st of Junary )</h4>
+				<div style="display:inline-block;margin-right:10px;" >
+					<label>Month</label>
+					<h:inputText style="width:5%;" id="s_month" value="#{room.s_month}" converterMessage="Please enter digits only." binding="#{room.s_date_UI}" />
+					<label>Day</label>
+					<h:inputText style="width:5%;" id="s_day" value="#{room.s_day}" converterMessage="Please enter digits only."  />
+					<br/>
+					<h:message for="s_month" style="color:red;margin:8px;" />
+				</div>
+			
+				<br/><br/>
+				
+				<h3>Give the final date that the apartment is available</h3><br/>
+				<div style="display:inline-block;margin-right:10px;" >
+					<label>Month</label>
+					<h:inputText style="width:5%;" id="f_month" value="#{room.f_month}" converterMessage="Please enter digits only." binding="#{room.f_date_UI}" />
+					<label>Day</label>
+					<h:inputText style="width:5%;" id="f_day" value="#{room.f_day}" converterMessage="Please enter digits only."  />
+					<br/>
+					<h:message for="f_month" style="color:red;margin:8px;" />
+				</div>
+				
+					<br/><br/>
+
+				<label>What type of an apartment is?</label><br/>
+				<h:selectOneRadio id="type" value="#{room.type}" layout="pageDirection" class="radio1" >
+	   				<f:selectItem itemValue="Private Room" itemLabel="Private Room" /><br/>
+   					<f:selectItem itemValue="Shared Room" itemLabel="Shared Room" />
+   					<f:selectItem itemValue="Apartment" itemLabel="Apartment" />
+				</h:selectOneRadio>
+				<h:message for="type" style="color:red;margin:8px;" />
+			
+				<br/><br/>
+			
+				<div style="display:inline-block;margin-right:10px;" >
+					<label>Give the number of the beds.</label>
+					<h:inputText style="width:10%;" id="beds" value="#{room.beds}" converterMessage="Please enter digits only."   binding="#{room.beds_UI}" />
+					<label>Give the number of the baths.</label>
+					<h:inputText style="width:10%;" id="baths" value="#{room.baths}" converterMessage="Please enter digits only."  />
+				</div>
+			
+				<br/><br/>
+			
+				<div style="display:inline-block;margin-right:10px;" >
+					<label>Give the Area of the beds.      </label>
+					<h:inputText style="width:10%;position:relative;left:20px;" id="area" value="#{room.area}" converterMessage="Please enter digits only."  />
+					<label style="position:relative;left:20px;">Give the number of the rooms.</label>
+					<h:inputText style="width:10%;position:relative;left:20px;" id="rooms" value="#{room.rooms}" converterMessage="Please enter digits only."  />
+				</div>
+				<br/><br/>	
+				<h:message for="beds"  style="color:red;margin:8px;" />
+				<h:message for="area"  style="color:red;margin:8px;" />
+				<h:message for="rooms"  style="color:red;margin:8px;" />
+				<h:message for="baths"  style="color:red;margin:8px;" />
+			
+				<br/><br/><br/>	
+				
+				<h3> More Informations </h3>
+				<br/><br/>
+				
+				<div style="display:inline-block;" >
+					<label>Does it has a living room?</label>
+					<h:selectOneRadio id="living_r" value="#{room.living_r}"  layout="pageDirection"  class="radio1">
+   						<f:selectItem itemValue="Yes" itemLabel="YES" /><br/>
+   						<f:selectItem itemValue="No" itemLabel="NO" />
+					</h:selectOneRadio>
+				</div>				
+				<div style="display:inline-block;position:relative;left:100px;" >
+					<label  for="wifi">Does it has availble wifi?</label>
+					<h:selectOneRadio id="wifi" value="#{room.wifi}" layout="pageDirection" class="radio1" >
+	   					<f:selectItem itemValue="Yes" itemLabel="YES" /><br/>
+   						<f:selectItem itemValue="No" itemLabel="NO" />
+					</h:selectOneRadio>
+				</div>	
+				<div   style="display:inline-block;position:relative;left:200px;" >
+					<label>Does it has availble refrigerator?</label>
+					<h:selectOneRadio id="refrigerator" value="#{room.refrigerator}" layout="pageDirection"   class="radio1" >
+   						<f:selectItem itemValue="Yes" itemLabel="YES" /><br/>
+   						<f:selectItem itemValue="No" itemLabel="NO" />
+					</h:selectOneRadio>
+				</div>
+				
+				<br/><br/><br/>
+				
+				<div  style="display:inline-block;" >
+					<label>Does it has availble heating?</label>
+					<h:selectOneRadio id="heating" value="#{room.heating}" layout="pageDirection"  class="radio1" >
+   						<f:selectItem itemValue="Yes" itemLabel="YES" /><br/> 
+	   					<f:selectItem itemValue="No" itemLabel="NO" />
+					</h:selectOneRadio>
+				</div>
+				<div  style="display:inline-block;position:relative;left:85px;" >
+					<label>Does it has availble kitchen?</label>
+					<h:selectOneRadio id="kitchen" value="#{room.kitchen}" layout="pageDirection"  class="radio1" >
+   						<f:selectItem itemValue="Yes" itemLabel="YES" /><br/>
+	   					<f:selectItem itemValue="No" itemLabel="NO" />
+					</h:selectOneRadio>
+				</div>				
+				<div style="display:inline-block;position:relative;left:155px;" >
+					<label>Does it has availble TV?</label>
+					<h:selectOneRadio id="tv" value="#{room.tv}" layout="pageDirection"  class="radio1" >
+   						<f:selectItem itemValue="Yes" itemLabel="YES" /><br/>
+	   					<f:selectItem itemValue="No" itemLabel="NO" />
+					</h:selectOneRadio>
+				</div>
+				
+				<br/><br/><br/>
+				
+				<div style="display:inline-block;" >
+					<label>Is there availble parking Space?</label>
+					<h:selectOneRadio id="parking" value="#{room.parking}" layout="pageDirection"   class="radio1" >
+   						<f:selectItem itemValue="Yes" itemLabel="YES" /><br/>
+	   					<f:selectItem itemValue="No" itemLabel="NO" />
+					</h:selectOneRadio>
+				</div>
+				<div style="display:inline-block;position:relative;left:330px;" >
+					<label>Does it has availble elevaitor?</label>
+					<h:selectOneRadio id="elevaitor" value="#{room.elevator}" layout="pageDirection"  class="radio1" >
+   						<f:selectItem itemValue="Yes" itemLabel="YES" /><br/>
+	   					<f:selectItem itemValue="No" itemLabel="NO" />
+					</h:selectOneRadio>
+				</div>
+				
+				<br/><br/><br/><br/><br/>
+				<h:commandButton class="button button1" value="Edit" action="#{room.edit()}" />
+			</h:form>
+		</h:panelGroup>
+		
+		
+		
+		
+		
+		<h:panelGroup rendered="#{room.render_location()}">
+			
+			<h:form prependId="false" enctype="multipart/form-data" class="form">
+			<br/>
+			<h3  style="color:#4CAF50;">Dont fill the fields you don't want to edit.</h3>
+			<br/><br/>
+ 
+    			<h3 style="margin-top:0">Geocode</h3>
+    			<h:panelGrid columns="3" style="margin-bottom:10px" cellpadding="5">
+        			<p:outputLabel for="address" value="Address:"  />
+    	    		<p:inputText id="address" value="#{room.address}" binding="#{room.map_UI}" />
+        			<p:commandButton value="Geocode" icon="ui-icon-search" onclick="geocode()" type="button"  />
+        			
+    			</h:panelGrid>
+ 
+	    		<p:gmap id="geoGmap" widgetVar="geoMap" center="#{room.center_str}" zoom="10" type="ROADMAP" model="#{room.geoModel}" style="width:33%;height:400px">
+    	    		<p:ajax event="geocode" listener="#{room.onGeocode}" update="@this" />
+    			</p:gmap>
+    			<br/><br/>
+    			<h:message for="address" style="color:red;margin:8px;" />
+   			
+				<br/><br/><br/>
+				
+				<label>Give the location</label>
+				<h:inputText id="location" value="#{room.location}"  style="width:15%;position:absolute;left:250px;" />
+				<br/><br/>
+				<h:message for="location" style="color:red;margin:8px;"   />
+				
+				<br/><br/><br/>
+				
+				<label>Give description about how to reach this place.</label><br/>
+				<h:inputTextarea id="info" value="#{room.info}" cols="50" rows="10" />
+				<br/><br/>
+				<h:message for="info" style="color:red;margin:8px;" /><br/><br/><br/>
+				<h:commandButton class="button button1" value="Edit" action="#{room.edit()}" />
+			</h:form>
+		</h:panelGroup>
+		
+		
+		
+		
+		<h:panelGroup rendered="#{room.render_Descreption()}" >
+			<h:form class="form">
+				<br/>
+				<h3  style="color:#4CAF50;">Dont fill the fields you don't want to edit.</h3>
+				<br/><br/>
+				<label>Give a description about the apartment.</label><br/>
+				<h:inputTextarea id="description" value="#{room.description}" cols="50" rows="10"  />
+				<br/>
+				<h:message for="info" style="color:red;margin:8px;" />
+				<br/><br/><br/>
+				<h:commandButton class="button button1" value="Edit" action="#{room.edit()}" />
+			</h:form>
+		</h:panelGroup>
+		
+		
+		
+		
+		<h:panelGroup rendered="#{room.render_rules()}"  >
+			<h:form class="form">
+			<br/>
+			<h3  style="color:#4CAF50;">Dont fill the fields you don't want to edit.</h3>
+			<br/><br/>
+			
+			<div style="display:inline-block;margin-right:10px;" >
+					<label>Do you allow smoking?</label>
+					<h:selectOneRadio id="smoking_rule" value="#{room.smoking_rule}" binding="#{room.smoking_rule_UI}" layout="pageDirection"  class="radio1">
+	   					<f:selectItem itemValue="Allowed" itemLabel="YES" /><br/>
+   						<f:selectItem itemValue="Not Allowed" itemLabel="NO" />
+					</h:selectOneRadio>
+					<h:message for="smoking_rule" style="color:red;"/>
+				</div>	
+				<div style="display:inline-block;margin-right:10px;" >
+					<label>Do you allow pets?</label>
+					<h:selectOneRadio id="pet_rule" value="#{room.pet_rule}" binding="#{room.pet_rule_UI}" layout="pageDirection"  class="radio1">
+   						<f:selectItem itemValue="Allowed" itemLabel="YES" /><br/>
+   						<f:selectItem itemValue="Not Allowed" itemLabel="NO" />
+					</h:selectOneRadio>
+					<h:message for="pet_rule" style="color:red;"/>
+				</div>
+				<div style="display:inline-block;margin-right:10px;" >
+					<label>Do you allow events?</label>
+					<h:selectOneRadio id="event_rule" value="#{room.event_rule}" binding="#{room.event_rule_UI}" layout="pageDirection"  class="radio1">
+   						<f:selectItem itemValue="Allowed" itemLabel="YES" /><br/>
+	   					<f:selectItem itemValue="Not Allowed" itemLabel="NO" />
+					</h:selectOneRadio>
+					<h:message for="event_rule" style="color:red;"/>
+				</div>
+				
+				<br/><br/>
+				<br/><br/>
+				
+				<label>Give the maximum number of people.</label>
+				<h:inputText id="no_people" style="position:absolute;left:350px;" value="#{room.no_people}" 
+				converterMessage="Please enter digits only." binding="#{room.no_people_UI}" />
+				
+				<br/><br/>
+				
+				<h:message for="no_people" style="color:red;margin:8px;" />
+				
+				<br/><br/>
+				
+				<label>Give the minimum days that can be rented.</label>
+				<h:inputText id="m_days" style="position:absolute;left:350px;" value="#{room.m_day}" 
+				converterMessage="Please enter digits only." binding="#{room.m_day_UI}" />
+				
+				<br/><br/>
+				
+				<h:message for="m_days" style="color:red;margin:8px;" />
+				<br/><br/><br/>
+				<h:commandButton class="button button1" value="Edit" action="#{room.edit()}" />
+			</h:form>
+		</h:panelGroup>
+		
+		
+		
+		<h:panelGroup rendered="#{room.render_pictures()}" class="form">
+			<h:messages id="messages" globalOnly="true" style="color: #4CAF50;font-size:150%;"/><br/>
+			<br/><br/>
+			<!-- gia na anevasei nees eikones -->
+			<h:form enctype="multipart/form-data">
+				<h3><label>Upload pictures of your apartment </label></h3>
+				
+				<p:fileUpload  id="files_upload" 
+					fileUploadListener="#{room.upload_file}" 
+					
+                	mode="advanced" 
+                  	multiple="true" 
+               	   	
+                  	allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
+                 	style="width:33%;"
+                 	update="datatable messages"
+                 	/>
+                 	<br/><br/>
+                 	
+                 	
+			</h:form>
+			<!--  gia na diagrapsei uparxontes eikones -->
+			<h:form id="datatable">
+				<p:dataTable value="#{room.images_2}"
+					var="image"
+					binding="#{room.datatable}"
+				
+    				styleClass="order-table"
+    				headerClass="order-table-header"
+    				rowClasses="order-table-odd-row,order-table-even-row"   			
+   		 			>
+ 
+   		 			<p:column>
+    					<f:facet name="header">User ID</f:facet>
+    					<div style="width:300px;height:213px;">
+    						<p:graphicImage name="#{image}" alt="Image Description for #{image}" title="#{image}" style="width:300px;height:213px;"/>
+    					</div>
+    				</p:column>
+    			
+    				<p:column>
+    					<f:facet name="header">Remove</f:facet>
+    				
+    					<p:commandButton id="remove" class="button" value="Remove picture" action="#{room.remove_picture()}" update="datatable messages" />
+    						
+    				</p:column>
+    			
+    			</p:dataTable>
+    			
+    			</h:form>
+    			
+    			<h:form>
+    				<h:commandButton class="button button1" value="Complete" action="room_page.xhtml?faces-redirect=true"  />
+				</h:form>
+			
+		</h:panelGroup>
+		
+		
+		
+		
+		<br/><br/><br/><br/><br/><br/>
+		
+	</ui:define>
+</ui:composition>

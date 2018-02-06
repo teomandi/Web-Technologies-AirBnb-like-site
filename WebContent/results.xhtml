@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<ui:composition template="/WEB-INF/templates/masterTemplate.xhtml"
+    xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:t="http://myfaces.apache.org/tomahawk"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+     xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+ >
+ 
+ <!-- periexei ta results -->
+ <ui:define name="title">Results</ui:define>
+	
+	<ui:define name="content">	
+		<h:outputStylesheet library="css" name="results.css"  />
+		
+		<br/><br/><br/>
+		<!-- buttons gia epomenh kai prohgoumenh selida -->
+		<h:form class="page_btn_form">
+			<h:commandButton value="&#8249;" class="page_btn"  action="#{result.previous_page()}" rendered="#{not result.disable_previous_btn()}"/>
+			<h:commandButton value="&#8249;" class="page_disabled" disabled="true"  action="#{result.previous_page()}" rendered="#{result.disable_previous_btn()}"/>
+			<h:commandButton value="&#8250;" class="page_btn" action="#{result.next_page()}" rendered="#{not result.disable_next_btn()}"/>
+			<h:commandButton value="&#8250;" class="page_disabled" disabled="true"  action="#{result.next_page()}" rendered="#{result.disable_next_btn()}"/>
+		</h:form>
+	
+		<br/><br/><br/>
+	
+		<div class="form">
+			<ui:repeat var="r" value="#{result.page_results}" varStatus="status" > 
+ 				<h:link  outcome="room_page.xhtml" >	 
+					<div class="cells" style="display:inline-block;font-size:120%;">
+						<table>
+							<tr>
+								<td>
+									<h:graphicImage library="apartments" name="#{r.mainPic}"  style="width:200px;height:200px;display:inline-block;margin:10px;"/>
+								</td>
+						
+								<td style="display:inline-block;width:170px;margin:10px;">
+									<span style="color:#3f9b43; ">Name:</span> #{r.roomName}<br/>
+									<span style="color:#3f9b43; ">Address:</span> #{r.address}<br/>
+									<span style="color:#3f9b43;">Location:</span> #{r.location}<br/>
+									<span style="color:#3f9b43;">Cost per day:</span> #{r.cpp}$<br/>
+									<span style="color:#3f9b43;">Type:</span> #{r.type}<br/>
+									<span style="color:#3f9b43;">Number of beds: </span> #{r.noBeds}<br/>
+									<p:rating value="#{r.rating}" readonly="true" /><br/>
+									<span style="color:#3f9b43;">Ratings: </span> #{r.noRatings}<br/>
+								</td>
+							</tr>
+							<f:param name="id" value="#{r.roomId}" />
+							<f:param name="roomToBook" value="#{r.roomId}" />
+						</table>		
+					</div>
+				</h:link>
+				<br/><br/>
+ 			</ui:repeat>	
+		</div>
+		
+		<br/><br/><br/><br/><br/>
+		<!-- buttons gia epomenh kai prohgoumenh selida -->
+		<h:form class="page_btn_form">
+			<h:commandButton value="&#8249;" class="page_btn"  action="#{result.previous_page()}" rendered="#{not result.disable_previous_btn()}"/>
+			<h:commandButton value="&#8249;" class="page_disabled" disabled="true"  action="#{result.previous_page()}" rendered="#{result.disable_previous_btn()}"/>
+			<h:commandButton value="&#8250;" class="page_btn" action="#{result.next_page()}" rendered="#{not result.disable_next_btn()}"/>
+			<h:commandButton value="&#8250;" class="page_disabled" disabled="true"  action="#{result.next_page()}" rendered="#{result.disable_next_btn()}"/>
+		</h:form>
+		
+		<br/><br/><br/>
+	
+	</ui:define>
+</ui:composition>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+ >
+
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<style >
+		
+	.side{
+		position:absolute;
+    	left:78%;
+    	top:300px;"
+    	
+	}
+	
+	.side2{
+		position:absolute;
+    	left:83%;
+    	top:600px;"
+    	
+	}
+		
+	.cell{
+		border: 4px groove #4CAF50;
+    	padding: 10px 40px; 
+   		background: #A9A9A9;
+    	width: 300px;
+    	border-radius: 25px;
+    	margin:10px;
+    	height:200px;
+
+	}
+
+	
+	</style>
+
+</h:head>
+<h:body>
+
+
+
+	<h:form  class="side" rendered="#{room.render_book()}" >
+		<div class="cell" style="text-align:center;">
+			<span style="color:#3f9b43;font-size:120%;">Dates</span> #{room.getFrom_day()}/#{room.getFrom_month()}/2017-#{room.getTill_day()}/#{room.getTill_month()}/2017<br/>
+			<span style="color:#3f9b43;font-size:120%;">Total Cost</span> #{room.getCost()}$<br/>
+			<span style="color:#3f9b43;font-size:120%;">People</span> #{room.getNo_people_2()}<br/>
+			<br/>
+			<br/>
+			<h:commandButton value="Book Now"  class="button" action="#{room.book()}">
+				<f:param name="roomToBook" value="#{r.roomId}" />
+			</h:commandButton>
+		</div>
+	</h:form>
+	
+	<br/>
+	
+	
+
+
+</h:body>
+</html>

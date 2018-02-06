@@ -1,0 +1,38 @@
+
+#pic {
+	position:absolute;
+	width:200px;
+	height: 400px;
+	left: 12%;
+	
+	
+}
+
+.form{
+	position:absolute;
+	left:33%;
+}
+
+
+
+.button{
+	position:absolute;
+	left:50%;
+}
+
+.cells{
+	border: 4px groove #4CAF50;
+   	padding: 10px 40px; 
+	background: #A9A9A9;
+   	width: 850px;
+    border-radius: 25px;
+    margin:10px;
+    height:200px;
+
+}
+
+
+.form2{
+	position:absolute;
+	left:18%;
+}

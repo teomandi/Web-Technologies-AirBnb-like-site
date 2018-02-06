@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<ui:composition template="/WEB-INF/templates/masterTemplate.xhtml"
+    xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:t="http://myfaces.apache.org/tomahawk"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+ >
+ <!-- periexei thn forma pou prepei na sumplhrwsei o host gia 
+ 		dhmiourghsei room -->
+    <ui:define name="title">Host Page</ui:define>
+	
+	<ui:define name="content">	
+		<h:outputStylesheet library="css" name="host.css"  />
+		<h:outputStylesheet library="css" name="buttons.css"  />
+
+		<h:panelGroup rendered="#{not host.render_page}" class="form">
+			<h4 style="color:red;">You have not been approved as a host yet</h4>
+		</h:panelGroup>
+	
+	
+		<h:panelGroup rendered="#{host.render_page}" >
+			
+			<h2 style="position:relative;left:12%;" >Welcome host!<br/><br/>
+				To add a new Apartment fill the following form.
+			</h2>
+			
+			<br/><br/>
+	
+<script type="text/javascript">
+    function geocode() {
+        PF('geoMap').geocode(document.getElementById('address').value);
+    }
+ 
+    function reverseGeocode() {
+        var lat = document.getElementById('lat').value,
+            lng = document.getElementById('lng').value;
+ 
+        PF('revGeoMap').reverseGeocode(lat, lng);
+    }
+</script>
+		
+			<h:form prependId="false" enctype="multipart/form-data" class="form">
+ 
+    			<h3 style="margin-top:0">Geocode</h3>
+    			<h:panelGrid columns="3" style="margin-bottom:10px" cellpadding="5">
+        			<p:outputLabel for="address" value="Address:"  />
+    	    		<p:inputText id="address" value="#{host.address}" binding="#{host.map_UI}" />
+        			<p:commandButton value="Geocode" icon="ui-icon-search" onclick="geocode()" type="button"  />
+        			
+    			</h:panelGrid>
+ 
+	    		<p:gmap id="geoGmap" widgetVar="geoMap" center="#{host.centerGeoMap}" zoom="10" type="ROADMAP" model="#{host.geoModel}" style="width:33%;height:400px">
+    	    		<p:ajax event="geocode" listener="#{host.onGeocode}" update="@this" />
+    			</p:gmap>
+    			<br/>
+    			<h:message for="address" style="color:red;margin:8px;" />
+   			
+				<br/><br/><br/>
+				
+				<label>Give the location</label>
+				<h:inputText id="location" value="#{host.location}" binding="#{host.location_UI}"  style="width:15%;position:absolute;left:350px;" /><br/>
+				<h:message for="location" style="color:red;margin:8px;"   />
+				
+				<br/><br/><br/>
+				
+				<label>How do you name your apartment?</label>
+				<h:inputText id="name" value="#{host.name}" binding="#{host.name_UI}" style="width:15%;position:absolute;left:350px;" /><br/>
+				<h:message for="name" style="color:red;margin:8px;" />
+				
+				<br/><br/><br/>
+	
+			
+				<label>Give information about how to reach this place.</label><br/>
+				<h:inputTextarea id="info" value="#{host.info}" cols="50" rows="10" binding="#{host.info_UI}" />
+				<br/>
+				<h:message for="info" style="color:red;margin:8px;" />
+		
+				<br/><br/><br/>
+			
+				<h3>Give the starting date that the apartment is available</h3><br/>
+				<h4>(for example 1-1 for 1st of Junary )</h4>
+				<div style="display:inline-block;margin-right:10px;" >
+					<label>Month</label>
+					<h:inputText style="width:5%;" id="s_month" value="#{host.s_month}" converterMessage="Please enter digits only." binding="#{host.s_date_UI}" />
+					<label>Day</label>
+					<h:inputText style="width:5%;" id="s_day" value="#{host.s_day}" converterMessage="Please enter digits only."  />
+					<br/>
+					<h:message for="s_month" style="color:red;margin:8px;" />
+				</div>
+			
+				<br/><br/>
+				
+				<h3>Give the final date that the apartment is available</h3><br/>
+				<div style="display:inline-block;margin-right:10px;" >
+					<label>Month</label>
+					<h:inputText style="width:5%;" id="f_month" value="#{host.f_month}" converterMessage="Please enter digits only." binding="#{host.f_date_UI}" />
+					<label>Day</label>
+					<h:inputText style="width:5%;" id="f_day" value="#{host.f_day}" converterMessage="Please enter digits only."  />
+					<br/>
+					<h:message for="f_month" style="color:red;margin:8px;" />
+				</div>
+				
+				<br/><br/><br/>
+				
+				<label>What type of an apartment is?</label><br/>
+				<h:selectOneRadio id="type" value="#{host.type}" binding="#{host.type_UI}" layout="pageDirection" >
+   					<f:selectItem itemValue="Private Room" itemLabel="Private Room" /><br/>
+   					<f:selectItem itemValue="Shared Room" itemLabel="Shared Room" />
+   					<f:selectItem itemValue="Apartment" itemLabel="Apartment" />
+				</h:selectOneRadio>
+				<h:message for="type" style="color:red;margin:8px;" />
+			
+				<br/><br/><br/>
+			
+				<label>Give the maximum number of people.</label>
+				<h:inputText id="no_people" style="width:5%;position:absolute;left:350px;" value="#{host.no_people}" converterMessage="Please enter digits only." binding="#{host.no_people_UI}" />
+				<br/>
+				<h:message for="no_people" style="color:red;margin:8px;" />
+			
+				<br/>
+				<label>Give the minimum charge. ($)</label>
+				<h:inputText id="m_charge" style="width:5%;position:absolute;left:350px;" value="#{host.m_charge}" converterMessage="Please enter digits only." binding="#{host.m_charge_UI}" />
+				<br/>
+				<h:message for="m_charge" style="color:red;margin:8px;" />
+			
+				<br/>
+				<label>Give the charge per person. ($)</label>
+				<h:inputText id="cpp" style="width:5%; position:absolute;left:350px;" value="#{host.cpp}" converterMessage="Please enter digits only." binding="#{host.cpp_UI}" />
+				<br/>
+				<h:message for="cpp" style="color:red;margin:8px;" />
+				
+				<br/>
+				<label>Give the minimum days that can be rented.</label>
+				<h:inputText id="m_days" style="width:5%; position:absolute;left:350px;" value="#{host.m_day}" converterMessage="Please enter digits only." binding="#{host.m_day_UI}" />
+				<br/>
+				<h:message for="m_days" style="color:red;margin:8px;" />
+			
+				<br/><br/><br/>
+			
+				<div style="display:inline-block;margin-right:10px;" >
+					<label>Do you allow smoking?</label>
+					<h:selectOneRadio id="smoking_rule" value="#{host.smoking_rule}" binding="#{host.smoking_rule_UI}" layout="pageDirection" >
+	   					<f:selectItem itemValue="Allowed" itemLabel="YES" /><br/>
+   						<f:selectItem itemValue="Not Allowed" itemLabel="NO" />
+					</h:selectOneRadio>
+					<h:message for="smoking_rule" style="color:red;"/>
+				</div>	
+				<div style="display:inline-block;margin-right:10px;" >
+					<label>Do you allow pets?</label>
+					<h:selectOneRadio id="pet_rule" value="#{host.pet_rule}" binding="#{host.pet_rule_UI}" layout="pageDirection">
+   						<f:selectItem itemValue="Allowed" itemLabel="YES" /><br/>
+   						<f:selectItem itemValue="Not Allowed" itemLabel="NO" />
+					</h:selectOneRadio>
+					<h:message for="pet_rule" style="color:red;"/>
+				</div>
+				<div style="display:inline-block;margin-right:10px;" >
+					<label>Do you allow events?</label>
+					<h:selectOneRadio id="event_rule" value="#{host.event_rule}" binding="#{host.event_rule_UI}" layout="pageDirection" >
+   						<f:selectItem itemValue="Allowed" itemLabel="YES" /><br/>
+	   					<f:selectItem itemValue="Not Allowed" itemLabel="NO" />
+					</h:selectOneRadio>
+					<h:message for="event_rule" style="color:red;"/>
+				</div>
+			
+				<br/><br/><br/>
+		
+				<label>Give a description about the apartment.</label><br/>
+				<h:inputTextarea id="description" value="#{host.description}" cols="50" rows="10" binding="#{host.description_UI}" />
+				<br/>
+				<h:message for="description" style="color:red;margin:8px;" />
+			
+				<br/><br/><br/>
+			
+				<div style="display:inline-block;margin-right:10px;" >
+					<label>Give the number of the beds.</label>
+					<h:inputText style="width:10%;" id="beds" value="#{host.beds}" converterMessage="Please enter digits only."   binding="#{host.beds_UI}" />
+					<label>Give the number of the baths.</label>
+					<h:inputText style="width:10%;" id="baths" value="#{host.baths}" converterMessage="Please enter digits only."  />
+				</div>
+			
+				<br/><br/>
+			
+				<div style="display:inline-block;margin-right:10px;" >
+					<label>Give the Area of the beds.      </label>
+					<h:inputText style="width:10%;position:relative;left:20px;" id="area" value="#{host.area}" converterMessage="Please enter digits only."  />
+					<label style="position:relative;left:20px;">Give the number of the rooms.</label>
+					<h:inputText style="width:10%;position:relative;left:20px;" id="rooms" value="#{host.rooms}" converterMessage="Please enter digits only."  />
+				</div>
+				<br/><br/>	
+				<h:message for="beds"  style="color:red;margin:8px;" />
+				<h:message for="area"  style="color:red;margin:8px;" />
+				<h:message for="rooms"  style="color:red;margin:8px;" />
+				<h:message for="baths"  style="color:red;margin:8px;" />
+			
+				<br/><br/><br/>	
+				<h3> More Informations </h3>
+				<br/><br/>
+				
+				<div style="display:inline-block;" >
+					<label>Does it has a living room?</label>
+					<h:selectOneRadio id="living_r" value="#{host.living_r}"  layout="pageDirection" >
+   						<f:selectItem itemValue="Yes" itemLabel="YES" /><br/>
+   						<f:selectItem itemValue="No" itemLabel="NO" />
+					</h:selectOneRadio>
+				</div>				
+				<div class="column2" style="display:inline-block;" >
+					<label>Does it has availble wifi?</label>
+					<h:selectOneRadio id="wifi" value="#{host.wifi}" layout="pageDirection"  >
+	   					<f:selectItem itemValue="Yes" itemLabel="YES" /><br/>
+   						<f:selectItem itemValue="No" itemLabel="NO" />
+					</h:selectOneRadio>
+				</div>	
+				<div  class="column3" style="display:inline-block;" >
+					<label>Does it has availble refrigerator?</label>
+					<h:selectOneRadio id="refrigerator" value="#{host.refrigerator}" layout="pageDirection"  >
+   						<f:selectItem itemValue="Yes" itemLabel="YES" /><br/>
+   						<f:selectItem itemValue="No" itemLabel="NO" />
+					</h:selectOneRadio>
+				</div>
+				
+				<br/><br/><br/>
+				
+				<div  style="display:inline-block;" >
+					<label>Does it has availble heating?</label>
+					<h:selectOneRadio id="heating" value="#{host.heating}" layout="pageDirection" >
+   						<f:selectItem itemValue="Yes" itemLabel="YES" /><br/>
+	   					<f:selectItem itemValue="No" itemLabel="NO" />
+					</h:selectOneRadio>
+				</div>
+				<div class="column2" style="display:inline-block;" >
+					<label>Does it has availble kitchen?</label>
+					<h:selectOneRadio id="kitchen" value="#{host.kitchen}" layout="pageDirection" >
+   						<f:selectItem itemValue="Yes" itemLabel="YES" /><br/>
+	   					<f:selectItem itemValue="No" itemLabel="NO" />
+					</h:selectOneRadio>
+				</div>				
+				<div class="column3" style="display:inline-block;" >
+					<label>Does it has availble TV?</label>
+					<h:selectOneRadio id="tv" value="#{host.tv}" layout="pageDirection" >
+   						<f:selectItem itemValue="Yes" itemLabel="YES" /><br/>
+	   					<f:selectItem itemValue="No" itemLabel="NO" />
+					</h:selectOneRadio>
+				</div>
+				
+				<br/><br/><br/>
+				
+				<div style="display:inline-block;" >
+					<label>Is there availble parking Space?</label>
+					<h:selectOneRadio id="parking" value="#{host.parking}" layout="pageDirection" >
+   						<f:selectItem itemValue="Yes" itemLabel="YES" /><br/>
+	   					<f:selectItem itemValue="No" itemLabel="NO" />
+					</h:selectOneRadio>
+				</div>
+				<div class="column3" style="display:inline-block;" >
+					<label>Does it has availble elevaitor?</label>
+					<h:selectOneRadio id="elevaitor" value="#{host.elevator}" layout="pageDirection" >
+   						<f:selectItem itemValue="Yes" itemLabel="YES" /><br/>
+	   					<f:selectItem itemValue="No" itemLabel="NO" />
+					</h:selectOneRadio>
+				</div>
+				
+				
+				<br/><br/><br/><br/>
+				<label>Give the main picture for your apartment</label>
+				<p:fileUpload value="#{host.main_pic}"	mode="simple"         	 
+               	   	sizeLimit="100000"  id="main_pic"  binding="#{host.main_pic_UI}" allowTypes="/(\.|\/)(gif|jpe?g|png)$/"/>
+               	  <br/>
+                <h:message for="main_pic" style="color:red;"/>
+  
+                 	 
+                 	 <br/><br/><br/>	
+                 	
+				<h:commandButton  class="button button1" value="Save" action="#{host.save}" />
+			</h:form>      			
+   			
+			<br/><br/><br/><br/>
+			
+		</h:panelGroup>
+
+		<ui:include src="/WEB-INF/templates/side_rooms.xhtml"/>
+	</ui:define>
+</ui:composition>
+	

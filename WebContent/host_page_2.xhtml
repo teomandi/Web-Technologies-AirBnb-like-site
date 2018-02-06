@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<ui:composition template="/WEB-INF/templates/masterTemplate.xhtml"
+    xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:t="http://myfaces.apache.org/tomahawk"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+ >
+ <!-- periexei mono to upload pixtures gia mazika upload -->
+    <ui:define name="title">Host Page</ui:define>
+	
+	<ui:define name="content">	
+		<h:outputStylesheet library="css" name="host.css"  />
+		
+		<br/><br/>
+		<h:form enctype="multipart/form-data" class="form">
+			<h3><label>Upload pictures of your apartment </label></h3>
+				<p:fileUpload  id="files_upload" binding="#{host.files_upload_UI}"
+				fileUploadListener="#{host.upload_file}" 
+					update="messages"
+                	mode="advanced" 
+                  	multiple="true" 
+               	   	
+                  	allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
+                 	style="width:33%;"
+                 	/>
+                 	<br/><br/>
+                 	<h:message id="messages" for="files_upload" style="color: #4CAF50;"/><br/>
+                 	<h:commandButton class="button button1" value="Complete" action="host_page.xhtml?faces-redirect=true" />
+		</h:form>
+	</ui:define>
+</ui:composition>
